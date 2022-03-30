@@ -15,16 +15,20 @@
 package com.aliyuncs.eci.model.v20180808;
 
 import com.aliyuncs.RpcAcsRequest;
+import com.aliyuncs.http.MethodType;
 
 /**
  * @author auto create
- * @version 
+ * @version
  */
 public class DescribeMultiContainerGroupMetricRequest extends RpcAcsRequest<DescribeMultiContainerGroupMetricResponse> {
-	
+
 	public DescribeMultiContainerGroupMetricRequest() {
 		super("Eci", "2018-08-08", "DescribeMultiContainerGroupMetric", "eci");
+		setMethod(MethodType.POST);
 	}
+
+	private String metricType;
 
 	private Long resourceOwnerId;
 
@@ -37,6 +41,17 @@ public class DescribeMultiContainerGroupMetricRequest extends RpcAcsRequest<Desc
 	private String ownerAccount;
 
 	private Long ownerId;
+
+	public String getMetricType() {
+		return this.metricType;
+	}
+
+	public void setMetricType(String metricType) {
+		this.metricType = metricType;
+		if(metricType != null){
+			putQueryParameter("MetricType", metricType);
+		}
+	}
 
 	public Long getResourceOwnerId() {
 		return this.resourceOwnerId;
