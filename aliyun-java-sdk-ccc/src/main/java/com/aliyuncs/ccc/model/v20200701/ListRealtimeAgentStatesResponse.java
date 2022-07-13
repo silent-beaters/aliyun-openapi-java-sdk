@@ -135,7 +135,19 @@ public class ListRealtimeAgentStatesResponse extends AcsResponse {
 
 			private String counterParty;
 
+			private String workMode;
+
+			private Boolean outboundScenario;
+
+			private String mobile;
+
+			private String callType;
+
+			private Long duration;
+
 			private List<String> skillGroupIdList;
+
+			private List<String> skillGroupNameList;
 
 			public String getExtension() {
 				return this.extension;
@@ -201,12 +213,60 @@ public class ListRealtimeAgentStatesResponse extends AcsResponse {
 				this.counterParty = counterParty;
 			}
 
+			public String getWorkMode() {
+				return this.workMode;
+			}
+
+			public void setWorkMode(String workMode) {
+				this.workMode = workMode;
+			}
+
+			public Boolean getOutboundScenario() {
+				return this.outboundScenario;
+			}
+
+			public void setOutboundScenario(Boolean outboundScenario) {
+				this.outboundScenario = outboundScenario;
+			}
+
+			public String getMobile() {
+				return this.mobile;
+			}
+
+			public void setMobile(String mobile) {
+				this.mobile = mobile;
+			}
+
+			public String getCallType() {
+				return this.callType;
+			}
+
+			public void setCallType(String callType) {
+				this.callType = callType;
+			}
+
+			public Long getDuration() {
+				return this.duration;
+			}
+
+			public void setDuration(Long duration) {
+				this.duration = duration;
+			}
+
 			public List<String> getSkillGroupIdList() {
 				return this.skillGroupIdList;
 			}
 
 			public void setSkillGroupIdList(List<String> skillGroupIdList) {
 				this.skillGroupIdList = skillGroupIdList;
+			}
+
+			public List<String> getSkillGroupNameList() {
+				return this.skillGroupNameList;
+			}
+
+			public void setSkillGroupNameList(List<String> skillGroupNameList) {
+				this.skillGroupNameList = skillGroupNameList;
 			}
 		}
 	}

@@ -1,3 +1,52 @@
+2022-07-11 Version: 2.8.20
+- add ListPrometheusInstances api.
+
+2022-06-29 Version: 2.8.19
+- Update Upload api.
+
+2022-06-27 Version: 2.8.17
+- add GetClusterAllUrl api.
+- update ListDashBoardsByName api.
+
+2022-06-15 Version: 2.8.16
+- Generated 2019-08-08 for `ARMS`.
+
+2022-05-30 Version: 2.8.15
+- Update DeleteGrafanaResource.
+
+2022-05-30 Version: 2.8.14
+- Arms AlertManager DescrieWebhookContacts.
+- Param Adapt SDK.
+
+2022-05-23 Version: 2.8.13
+- Update DeleteGrafanaResource API.
+
+2022-05-20 Version: 2.8.12
+- Update ListDashBoards and AddPrometheusGlobalViewByAliClusterIds api.
+
+2022-04-22 Version: 2.8.10
+- New add ManageGetRecordingRule api.
+
+2022-04-20 Version: 2.7.99
+- New add GlobalView api.
+
+2022-04-18 Version: 2.7.98
+- Add Upload Sourcemap API.
+
+2022-04-18 Version: 2.7.50
+- Update CreateOrUpdateEventBridgeIntegration.
+
+2022-04-08 Version: 2.7.49
+- Add ListEventBridgeIntegrations.
+- Add CreateOrUpdateEventBridgeIntegration.
+- Add DeleteEventBridgeIntegration.
+
+2022-04-02 Version: 2.7.48
+- Add new openapi interface.
+
+2022-03-30 Version: 2.7.47
+- Add TagResources.
+
 2022-03-17 Version: 2.7.46
 - Fixed bugs for SearchTraces and SearchTracesByPage.
 

@@ -145,6 +145,8 @@ public class QueryClusterDetailResponse extends AcsResponse {
 
 		private String chargeType;
 
+		private String orderClusterVersion;
+
 		private List<InstanceModel> instanceModels;
 
 		public String getVpcId() {
@@ -419,6 +421,14 @@ public class QueryClusterDetailResponse extends AcsResponse {
 			this.chargeType = chargeType;
 		}
 
+		public String getOrderClusterVersion() {
+			return this.orderClusterVersion;
+		}
+
+		public void setOrderClusterVersion(String orderClusterVersion) {
+			this.orderClusterVersion = orderClusterVersion;
+		}
+
 		public List<InstanceModel> getInstanceModels() {
 			return this.instanceModels;
 		}
@@ -442,6 +452,8 @@ public class QueryClusterDetailResponse extends AcsResponse {
 			private String healthStatus;
 
 			private String creationTimestamp;
+
+			private String zone;
 
 			public String getPodName() {
 				return this.podName;
@@ -497,6 +509,14 @@ public class QueryClusterDetailResponse extends AcsResponse {
 
 			public void setCreationTimestamp(String creationTimestamp) {
 				this.creationTimestamp = creationTimestamp;
+			}
+
+			public String getZone() {
+				return this.zone;
+			}
+
+			public void setZone(String zone) {
+				this.zone = zone;
 			}
 		}
 	}

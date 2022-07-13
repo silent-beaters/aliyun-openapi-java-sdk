@@ -32,8 +32,6 @@ public class DescribeVirtualMFADevicesRequest extends RpcAcsRequest<DescribeVirt
 
 	private Integer maxResults;
 
-	private String directoryId;
-
 	private List<String> endUserIds;
 	public DescribeVirtualMFADevicesRequest() {
 		super("ecd", "2020-09-30", "DescribeVirtualMFADevices");
@@ -74,17 +72,6 @@ public class DescribeVirtualMFADevicesRequest extends RpcAcsRequest<DescribeVirt
 		this.maxResults = maxResults;
 		if(maxResults != null){
 			putQueryParameter("MaxResults", maxResults.toString());
-		}
-	}
-
-	public String getDirectoryId() {
-		return this.directoryId;
-	}
-
-	public void setDirectoryId(String directoryId) {
-		this.directoryId = directoryId;
-		if(directoryId != null){
-			putQueryParameter("DirectoryId", directoryId);
 		}
 	}
 

@@ -129,6 +129,8 @@ public class DescribeDesktopsResponse extends AcsResponse {
 
 		private String bundleId;
 
+		private String bundleName;
+
 		private String officeSiteType;
 
 		private String hostName;
@@ -141,6 +143,20 @@ public class DescribeDesktopsResponse extends AcsResponse {
 
 		private String gpuDriverVersion;
 
+		private String zoneType;
+
+		private String progress;
+
+		private Boolean volumeEncryptionEnabled;
+
+		private String volumeEncryptionKey;
+
+		private String officeSiteVpcType;
+
+		private String platform;
+
+		private String sessionType;
+
 		private List<Disk> disks;
 
 		private List<Tag> tags;
@@ -148,6 +164,8 @@ public class DescribeDesktopsResponse extends AcsResponse {
 		private List<Session> sessions;
 
 		private List<String> endUserIds;
+
+		private FotaUpdate fotaUpdate;
 
 		public String getCreationTime() {
 			return this.creationTime;
@@ -397,6 +415,14 @@ public class DescribeDesktopsResponse extends AcsResponse {
 			this.bundleId = bundleId;
 		}
 
+		public String getBundleName() {
+			return this.bundleName;
+		}
+
+		public void setBundleName(String bundleName) {
+			this.bundleName = bundleName;
+		}
+
 		public String getOfficeSiteType() {
 			return this.officeSiteType;
 		}
@@ -445,6 +471,62 @@ public class DescribeDesktopsResponse extends AcsResponse {
 			this.gpuDriverVersion = gpuDriverVersion;
 		}
 
+		public String getZoneType() {
+			return this.zoneType;
+		}
+
+		public void setZoneType(String zoneType) {
+			this.zoneType = zoneType;
+		}
+
+		public String getProgress() {
+			return this.progress;
+		}
+
+		public void setProgress(String progress) {
+			this.progress = progress;
+		}
+
+		public Boolean getVolumeEncryptionEnabled() {
+			return this.volumeEncryptionEnabled;
+		}
+
+		public void setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+			this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+		}
+
+		public String getVolumeEncryptionKey() {
+			return this.volumeEncryptionKey;
+		}
+
+		public void setVolumeEncryptionKey(String volumeEncryptionKey) {
+			this.volumeEncryptionKey = volumeEncryptionKey;
+		}
+
+		public String getOfficeSiteVpcType() {
+			return this.officeSiteVpcType;
+		}
+
+		public void setOfficeSiteVpcType(String officeSiteVpcType) {
+			this.officeSiteVpcType = officeSiteVpcType;
+		}
+
+		public String getPlatform() {
+			return this.platform;
+		}
+
+		public void setPlatform(String platform) {
+			this.platform = platform;
+		}
+
+		public String getSessionType() {
+			return this.sessionType;
+		}
+
+		public void setSessionType(String sessionType) {
+			this.sessionType = sessionType;
+		}
+
 		public List<Disk> getDisks() {
 			return this.disks;
 		}
@@ -477,6 +559,14 @@ public class DescribeDesktopsResponse extends AcsResponse {
 			this.endUserIds = endUserIds;
 		}
 
+		public FotaUpdate getFotaUpdate() {
+			return this.fotaUpdate;
+		}
+
+		public void setFotaUpdate(FotaUpdate fotaUpdate) {
+			this.fotaUpdate = fotaUpdate;
+		}
+
 		public static class Disk {
 
 			private String diskType;
@@ -484,6 +574,8 @@ public class DescribeDesktopsResponse extends AcsResponse {
 			private String diskId;
 
 			private Integer diskSize;
+
+			private String performanceLevel;
 
 			public String getDiskType() {
 				return this.diskType;
@@ -507,6 +599,14 @@ public class DescribeDesktopsResponse extends AcsResponse {
 
 			public void setDiskSize(Integer diskSize) {
 				this.diskSize = diskSize;
+			}
+
+			public String getPerformanceLevel() {
+				return this.performanceLevel;
+			}
+
+			public void setPerformanceLevel(String performanceLevel) {
+				this.performanceLevel = performanceLevel;
 			}
 		}
 
@@ -539,6 +639,8 @@ public class DescribeDesktopsResponse extends AcsResponse {
 
 			private String establishmentTime;
 
+			private String externalUserName;
+
 			public String getEndUserId() {
 				return this.endUserId;
 			}
@@ -553,6 +655,57 @@ public class DescribeDesktopsResponse extends AcsResponse {
 
 			public void setEstablishmentTime(String establishmentTime) {
 				this.establishmentTime = establishmentTime;
+			}
+
+			public String getExternalUserName() {
+				return this.externalUserName;
+			}
+
+			public void setExternalUserName(String externalUserName) {
+				this.externalUserName = externalUserName;
+			}
+		}
+
+		public static class FotaUpdate {
+
+			private String currentAppVersion;
+
+			private String newAppVersion;
+
+			private String releaseNote;
+
+			private Long size;
+
+			public String getCurrentAppVersion() {
+				return this.currentAppVersion;
+			}
+
+			public void setCurrentAppVersion(String currentAppVersion) {
+				this.currentAppVersion = currentAppVersion;
+			}
+
+			public String getNewAppVersion() {
+				return this.newAppVersion;
+			}
+
+			public void setNewAppVersion(String newAppVersion) {
+				this.newAppVersion = newAppVersion;
+			}
+
+			public String getReleaseNote() {
+				return this.releaseNote;
+			}
+
+			public void setReleaseNote(String releaseNote) {
+				this.releaseNote = releaseNote;
+			}
+
+			public Long getSize() {
+				return this.size;
+			}
+
+			public void setSize(Long size) {
+				this.size = size;
 			}
 		}
 	}

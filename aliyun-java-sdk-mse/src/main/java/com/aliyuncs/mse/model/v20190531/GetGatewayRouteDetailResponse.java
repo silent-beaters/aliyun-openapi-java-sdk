@@ -117,6 +117,10 @@ public class GetGatewayRouteDetailResponse extends AcsResponse {
 
 		private String destinationType;
 
+		private Boolean enableWaf;
+
+		private Integer ahasStatus;
+
 		private List<RouteServicesItem> routeServices;
 
 		private List<Long> domainIdList;
@@ -257,6 +261,22 @@ public class GetGatewayRouteDetailResponse extends AcsResponse {
 
 		public void setDestinationType(String destinationType) {
 			this.destinationType = destinationType;
+		}
+
+		public Boolean getEnableWaf() {
+			return this.enableWaf;
+		}
+
+		public void setEnableWaf(Boolean enableWaf) {
+			this.enableWaf = enableWaf;
+		}
+
+		public Integer getAhasStatus() {
+			return this.ahasStatus;
+		}
+
+		public void setAhasStatus(Integer ahasStatus) {
+			this.ahasStatus = ahasStatus;
 		}
 
 		public List<RouteServicesItem> getRouteServices() {

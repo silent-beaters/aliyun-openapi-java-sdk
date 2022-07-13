@@ -27,6 +27,8 @@ public class LaunchSurveyRequest extends RpcAcsRequest<LaunchSurveyResponse> {
 
 	private String contactFlowId;
 
+	private String contactFlowVariables;
+
 	private String userId;
 
 	private String deviceId;
@@ -34,6 +36,10 @@ public class LaunchSurveyRequest extends RpcAcsRequest<LaunchSurveyResponse> {
 	private String jobId;
 
 	private String instanceId;
+
+	private String smsMetadataId;
+
+	private String surveyChannel;
 	public LaunchSurveyRequest() {
 		super("CCC", "2020-07-01", "LaunchSurvey", "CCC");
 		setMethod(MethodType.POST);
@@ -51,6 +57,17 @@ public class LaunchSurveyRequest extends RpcAcsRequest<LaunchSurveyResponse> {
 		this.contactFlowId = contactFlowId;
 		if(contactFlowId != null){
 			putQueryParameter("ContactFlowId", contactFlowId);
+		}
+	}
+
+	public String getContactFlowVariables() {
+		return this.contactFlowVariables;
+	}
+
+	public void setContactFlowVariables(String contactFlowVariables) {
+		this.contactFlowVariables = contactFlowVariables;
+		if(contactFlowVariables != null){
+			putQueryParameter("ContactFlowVariables", contactFlowVariables);
 		}
 	}
 
@@ -95,6 +112,28 @@ public class LaunchSurveyRequest extends RpcAcsRequest<LaunchSurveyResponse> {
 		this.instanceId = instanceId;
 		if(instanceId != null){
 			putQueryParameter("InstanceId", instanceId);
+		}
+	}
+
+	public String getSmsMetadataId() {
+		return this.smsMetadataId;
+	}
+
+	public void setSmsMetadataId(String smsMetadataId) {
+		this.smsMetadataId = smsMetadataId;
+		if(smsMetadataId != null){
+			putQueryParameter("SmsMetadataId", smsMetadataId);
+		}
+	}
+
+	public String getSurveyChannel() {
+		return this.surveyChannel;
+	}
+
+	public void setSurveyChannel(String surveyChannel) {
+		this.surveyChannel = surveyChannel;
+		if(surveyChannel != null){
+			putQueryParameter("SurveyChannel", surveyChannel);
 		}
 	}
 

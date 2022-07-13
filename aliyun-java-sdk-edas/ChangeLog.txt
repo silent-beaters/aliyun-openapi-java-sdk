@@ -1,3 +1,37 @@
+2022-07-08 Version: 3.26.6
+- Supported StartK8sAppPrecheck
+- Supported GetK8sAppPrecheckResult
+
+2022-06-16 Version: 3.26.5
+- Supported ExternalTrafficPolicy for CreateK8sService.
+- Supported ExternalTrafficPolicy for UpdateK8sService.
+
+2022-06-02 Version: 3.26.4
+- Add ListK8sNamespaces.
+
+2022-05-18 Version: 3.26.3
+- Supported EnableEmptyPushReject for InsertK8sApplication.
+- Supported EnableLosslessRule for InsertK8sApplication.
+- Supported LosslessRuleWarmupTime for InsertK8sApplication.
+- Supported LosslessRuleDelayTime for InsertK8sApplication.
+- Supported LosslessRuleFuncType for InsertK8sApplication.
+- Supported LosslessRuleAligned for InsertK8sApplication.
+- Supported LosslessRuleRelated for InsertK8sApplication.
+- Supported EnableEmptyPushReject for DeployK8sApplication.
+- Supported EnableLosslessRule for DeployK8sApplication.
+- Supported LosslessRuleWarmupTime for DeployK8sApplication.
+- Supported LosslessRuleDelayTime for DeployK8sApplication.
+- Supported LosslessRuleFuncType for DeployK8sApplication.
+- Supported LosslessRuleAligned for DeployK8sApplication.
+- Supported LosslessRuleRelated for DeployK8sApplication.
+
+2022-04-25 Version: 3.26.2
+- Supported ResourceGroupId for InsertApplication.
+- Supported ResourceGroupId for InsertK8sApplication.
+
+2022-04-14 Version: 3.26.1
+- Supported BuildPackId configurations for K8s Applications.
+
 2022-03-14 Version: 3.26.0
 - Add developType in GetK8sApplication.
 

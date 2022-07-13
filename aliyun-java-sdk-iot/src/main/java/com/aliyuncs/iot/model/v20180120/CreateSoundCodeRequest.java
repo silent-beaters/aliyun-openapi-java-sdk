@@ -30,6 +30,10 @@ public class CreateSoundCodeRequest extends RpcAcsRequest<CreateSoundCodeRespons
 	private String iotInstanceId;
 
 	private String soundCodeContent;
+
+	private String name;
+
+	private String openType;
 	public CreateSoundCodeRequest() {
 		super("Iot", "2018-01-20", "CreateSoundCode");
 		setMethod(MethodType.POST);
@@ -69,6 +73,28 @@ public class CreateSoundCodeRequest extends RpcAcsRequest<CreateSoundCodeRespons
 		this.soundCodeContent = soundCodeContent;
 		if(soundCodeContent != null){
 			putBodyParameter("SoundCodeContent", soundCodeContent);
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putBodyParameter("Name", name);
+		}
+	}
+
+	public String getOpenType() {
+		return this.openType;
+	}
+
+	public void setOpenType(String openType) {
+		this.openType = openType;
+		if(openType != null){
+			putBodyParameter("OpenType", openType);
 		}
 	}
 

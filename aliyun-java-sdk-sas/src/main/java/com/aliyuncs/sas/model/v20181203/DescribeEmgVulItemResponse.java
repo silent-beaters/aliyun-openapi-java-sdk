@@ -25,15 +25,23 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeEmgVulItemResponse extends AcsResponse {
 
+	private Integer currentPage;
+
 	private String requestId;
 
 	private Integer pageSize;
 
-	private Integer currentPage;
-
 	private Integer totalCount;
 
 	private List<GroupedVulItem> groupedVulItems;
+
+	public Integer getCurrentPage() {
+		return this.currentPage;
+	}
+
+	public void setCurrentPage(Integer currentPage) {
+		this.currentPage = currentPage;
+	}
 
 	public String getRequestId() {
 		return this.requestId;
@@ -49,14 +57,6 @@ public class DescribeEmgVulItemResponse extends AcsResponse {
 
 	public void setPageSize(Integer pageSize) {
 		this.pageSize = pageSize;
-	}
-
-	public Integer getCurrentPage() {
-		return this.currentPage;
-	}
-
-	public void setCurrentPage(Integer currentPage) {
-		this.currentPage = currentPage;
 	}
 
 	public Integer getTotalCount() {
@@ -77,62 +77,32 @@ public class DescribeEmgVulItemResponse extends AcsResponse {
 
 	public static class GroupedVulItem {
 
-		private String aliasName;
-
-		private Integer pendingCount;
-
-		private String name;
-
-		private Long gmtPublish;
-
-		private String description;
+		private Integer status;
 
 		private String type;
 
-		private Integer status;
-
-		private Integer progress;
+		private Integer checkType;
 
 		private Long gmtLastCheck;
 
-		public String getAliasName() {
-			return this.aliasName;
+		private Integer progress;
+
+		private String description;
+
+		private Long gmtPublish;
+
+		private Integer pendingCount;
+
+		private String aliasName;
+
+		private String name;
+
+		public Integer getStatus() {
+			return this.status;
 		}
 
-		public void setAliasName(String aliasName) {
-			this.aliasName = aliasName;
-		}
-
-		public Integer getPendingCount() {
-			return this.pendingCount;
-		}
-
-		public void setPendingCount(Integer pendingCount) {
-			this.pendingCount = pendingCount;
-		}
-
-		public String getName() {
-			return this.name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
-
-		public Long getGmtPublish() {
-			return this.gmtPublish;
-		}
-
-		public void setGmtPublish(Long gmtPublish) {
-			this.gmtPublish = gmtPublish;
-		}
-
-		public String getDescription() {
-			return this.description;
-		}
-
-		public void setDescription(String description) {
-			this.description = description;
+		public void setStatus(Integer status) {
+			this.status = status;
 		}
 
 		public String getType() {
@@ -143,12 +113,20 @@ public class DescribeEmgVulItemResponse extends AcsResponse {
 			this.type = type;
 		}
 
-		public Integer getStatus() {
-			return this.status;
+		public Integer getCheckType() {
+			return this.checkType;
 		}
 
-		public void setStatus(Integer status) {
-			this.status = status;
+		public void setCheckType(Integer checkType) {
+			this.checkType = checkType;
+		}
+
+		public Long getGmtLastCheck() {
+			return this.gmtLastCheck;
+		}
+
+		public void setGmtLastCheck(Long gmtLastCheck) {
+			this.gmtLastCheck = gmtLastCheck;
 		}
 
 		public Integer getProgress() {
@@ -159,12 +137,44 @@ public class DescribeEmgVulItemResponse extends AcsResponse {
 			this.progress = progress;
 		}
 
-		public Long getGmtLastCheck() {
-			return this.gmtLastCheck;
+		public String getDescription() {
+			return this.description;
 		}
 
-		public void setGmtLastCheck(Long gmtLastCheck) {
-			this.gmtLastCheck = gmtLastCheck;
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public Long getGmtPublish() {
+			return this.gmtPublish;
+		}
+
+		public void setGmtPublish(Long gmtPublish) {
+			this.gmtPublish = gmtPublish;
+		}
+
+		public Integer getPendingCount() {
+			return this.pendingCount;
+		}
+
+		public void setPendingCount(Integer pendingCount) {
+			this.pendingCount = pendingCount;
+		}
+
+		public String getAliasName() {
+			return this.aliasName;
+		}
+
+		public void setAliasName(String aliasName) {
+			this.aliasName = aliasName;
+		}
+
+		public String getName() {
+			return this.name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
 		}
 	}
 

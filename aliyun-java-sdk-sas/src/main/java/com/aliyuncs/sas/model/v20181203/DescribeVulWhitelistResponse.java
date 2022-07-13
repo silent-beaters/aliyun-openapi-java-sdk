@@ -25,15 +25,23 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeVulWhitelistResponse extends AcsResponse {
 
+	private Integer currentPage;
+
 	private String requestId;
 
 	private Integer pageSize;
 
-	private Integer currentPage;
-
 	private Integer totalCount;
 
 	private List<VulWhitelist> vulWhitelists;
+
+	public Integer getCurrentPage() {
+		return this.currentPage;
+	}
+
+	public void setCurrentPage(Integer currentPage) {
+		this.currentPage = currentPage;
+	}
 
 	public String getRequestId() {
 		return this.requestId;
@@ -49,14 +57,6 @@ public class DescribeVulWhitelistResponse extends AcsResponse {
 
 	public void setPageSize(Integer pageSize) {
 		this.pageSize = pageSize;
-	}
-
-	public Integer getCurrentPage() {
-		return this.currentPage;
-	}
-
-	public void setCurrentPage(Integer currentPage) {
-		this.currentPage = currentPage;
 	}
 
 	public Integer getTotalCount() {
@@ -77,21 +77,17 @@ public class DescribeVulWhitelistResponse extends AcsResponse {
 
 	public static class VulWhitelist {
 
-		private String name;
-
 		private String type;
+
+		private String targetInfo;
 
 		private String aliasName;
 
+		private String name;
+
 		private String reason;
 
-		public String getName() {
-			return this.name;
-		}
-
-		public void setName(String name) {
-			this.name = name;
-		}
+		private String id;
 
 		public String getType() {
 			return this.type;
@@ -99,6 +95,14 @@ public class DescribeVulWhitelistResponse extends AcsResponse {
 
 		public void setType(String type) {
 			this.type = type;
+		}
+
+		public String getTargetInfo() {
+			return this.targetInfo;
+		}
+
+		public void setTargetInfo(String targetInfo) {
+			this.targetInfo = targetInfo;
 		}
 
 		public String getAliasName() {
@@ -109,12 +113,28 @@ public class DescribeVulWhitelistResponse extends AcsResponse {
 			this.aliasName = aliasName;
 		}
 
+		public String getName() {
+			return this.name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
 		public String getReason() {
 			return this.reason;
 		}
 
 		public void setReason(String reason) {
 			this.reason = reason;
+		}
+
+		public String getId() {
+			return this.id;
+		}
+
+		public void setId(String id) {
+			this.id = id;
 		}
 	}
 

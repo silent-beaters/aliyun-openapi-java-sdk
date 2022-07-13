@@ -24,17 +24,9 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class ApplyTokenResponse extends AcsResponse {
 
-	private String requestId;
-
 	private String token;
 
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
+	private String requestId;
 
 	public String getToken() {
 		return this.token;
@@ -42,6 +34,14 @@ public class ApplyTokenResponse extends AcsResponse {
 
 	public void setToken(String token) {
 		this.token = token;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
 	}
 
 	@Override

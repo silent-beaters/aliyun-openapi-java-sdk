@@ -42,10 +42,14 @@ public class DescribeBundlesResponseUnmarshaller {
 			bundle.setProtocolType(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].ProtocolType"));
 			bundle.setBundleId(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].BundleId"));
 			bundle.setImageId(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].ImageId"));
+			bundle.setImageName(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].ImageName"));
 			bundle.setLanguage(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].Language"));
 			bundle.setBundleName(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].BundleName"));
 			bundle.setDesktopTypeFamily(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].DesktopTypeFamily"));
 			bundle.setCreationTime(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].CreationTime"));
+			bundle.setSessionType(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].SessionType"));
+			bundle.setVolumeEncryptionEnabled(_ctx.booleanValue("DescribeBundlesResponse.Bundles["+ i +"].VolumeEncryptionEnabled"));
+			bundle.setVolumeEncryptionKey(_ctx.stringValue("DescribeBundlesResponse.Bundles["+ i +"].VolumeEncryptionKey"));
 
 			DesktopTypeAttribute desktopTypeAttribute = new DesktopTypeAttribute();
 			desktopTypeAttribute.setCpuCount(_ctx.integerValue("DescribeBundlesResponse.Bundles["+ i +"].DesktopTypeAttribute.CpuCount"));

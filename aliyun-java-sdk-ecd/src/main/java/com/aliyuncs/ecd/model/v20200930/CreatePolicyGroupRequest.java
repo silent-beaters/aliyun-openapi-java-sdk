@@ -26,8 +26,6 @@ import com.aliyuncs.ecd.Endpoint;
 public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupResponse> {
 	   
 
-	private String watermarkCustomText;
-
 	private String preemptLogin;
 
 	private List<ClientType> clientTypes;
@@ -40,17 +38,27 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 
 	private String domainList;
 
+	private String netRedirect;
+
 	private String localDrive;
 
 	private List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRules;
 
+	private String recording;
+
 	private String clipboard;
+
+	private Long recordingFps;
 
 	private String usbRedirect;
 
 	private String watermarkType;
 
+	private String recordingStartTime;
+
 	private String watermark;
+
+	private String cameraRedirect;
 
 	private String html5Access;
 
@@ -65,6 +73,8 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 	private String watermarkTransparency;
 
 	private String name;
+
+	private String recordingEndTime;
 	public CreatePolicyGroupRequest() {
 		super("ecd", "2020-09-30", "CreatePolicyGroup");
 		setMethod(MethodType.POST);
@@ -72,17 +82,6 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
-	}
-
-	public String getWatermarkCustomText() {
-		return this.watermarkCustomText;
-	}
-
-	public void setWatermarkCustomText(String watermarkCustomText) {
-		this.watermarkCustomText = watermarkCustomText;
-		if(watermarkCustomText != null){
-			putQueryParameter("WatermarkCustomText", watermarkCustomText);
-		}
 	}
 
 	public String getPreemptLogin() {
@@ -164,6 +163,17 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 		}
 	}
 
+	public String getNetRedirect() {
+		return this.netRedirect;
+	}
+
+	public void setNetRedirect(String netRedirect) {
+		this.netRedirect = netRedirect;
+		if(netRedirect != null){
+			putQueryParameter("NetRedirect", netRedirect);
+		}
+	}
+
 	public String getLocalDrive() {
 		return this.localDrive;
 	}
@@ -194,6 +204,17 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 		}	
 	}
 
+	public String getRecording() {
+		return this.recording;
+	}
+
+	public void setRecording(String recording) {
+		this.recording = recording;
+		if(recording != null){
+			putQueryParameter("Recording", recording);
+		}
+	}
+
 	public String getClipboard() {
 		return this.clipboard;
 	}
@@ -202,6 +223,17 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 		this.clipboard = clipboard;
 		if(clipboard != null){
 			putQueryParameter("Clipboard", clipboard);
+		}
+	}
+
+	public Long getRecordingFps() {
+		return this.recordingFps;
+	}
+
+	public void setRecordingFps(Long recordingFps) {
+		this.recordingFps = recordingFps;
+		if(recordingFps != null){
+			putQueryParameter("RecordingFps", recordingFps.toString());
 		}
 	}
 
@@ -227,6 +259,17 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 		}
 	}
 
+	public String getRecordingStartTime() {
+		return this.recordingStartTime;
+	}
+
+	public void setRecordingStartTime(String recordingStartTime) {
+		this.recordingStartTime = recordingStartTime;
+		if(recordingStartTime != null){
+			putQueryParameter("RecordingStartTime", recordingStartTime);
+		}
+	}
+
 	public String getWatermark() {
 		return this.watermark;
 	}
@@ -235,6 +278,17 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 		this.watermark = watermark;
 		if(watermark != null){
 			putQueryParameter("Watermark", watermark);
+		}
+	}
+
+	public String getCameraRedirect() {
+		return this.cameraRedirect;
+	}
+
+	public void setCameraRedirect(String cameraRedirect) {
+		this.cameraRedirect = cameraRedirect;
+		if(cameraRedirect != null){
+			putQueryParameter("CameraRedirect", cameraRedirect);
 		}
 	}
 
@@ -315,6 +369,17 @@ public class CreatePolicyGroupRequest extends RpcAcsRequest<CreatePolicyGroupRes
 		this.name = name;
 		if(name != null){
 			putQueryParameter("Name", name);
+		}
+	}
+
+	public String getRecordingEndTime() {
+		return this.recordingEndTime;
+	}
+
+	public void setRecordingEndTime(String recordingEndTime) {
+		this.recordingEndTime = recordingEndTime;
+		if(recordingEndTime != null){
+			putQueryParameter("RecordingEndTime", recordingEndTime);
 		}
 	}
 

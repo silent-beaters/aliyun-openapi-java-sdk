@@ -51,6 +51,10 @@ public class ListSkillGroupStatesResponseUnmarshaller {
 			realTimeSkillGroupState.setSkillGroupId(_ctx.stringValue("ListSkillGroupStatesResponse.Data.List["+ i +"].SkillGroupId"));
 			realTimeSkillGroupState.setReadyAgents(_ctx.longValue("ListSkillGroupStatesResponse.Data.List["+ i +"].ReadyAgents"));
 			realTimeSkillGroupState.setInstanceId(_ctx.stringValue("ListSkillGroupStatesResponse.Data.List["+ i +"].InstanceId"));
+			realTimeSkillGroupState.setAverageWaitingTime(_ctx.longValue("ListSkillGroupStatesResponse.Data.List["+ i +"].AverageWaitingTime"));
+			realTimeSkillGroupState.setWaitingCallsLevel10(_ctx.longValue("ListSkillGroupStatesResponse.Data.List["+ i +"].WaitingCallsLevel10"));
+			realTimeSkillGroupState.setWaitingCallsLevel20(_ctx.longValue("ListSkillGroupStatesResponse.Data.List["+ i +"].WaitingCallsLevel20"));
+			realTimeSkillGroupState.setWaitingCallsLevel30(_ctx.longValue("ListSkillGroupStatesResponse.Data.List["+ i +"].WaitingCallsLevel30"));
 
 			list.add(realTimeSkillGroupState);
 		}

@@ -29,7 +29,7 @@ public class GetTrailStatusRequest extends RpcAcsRequest<GetTrailStatusResponse>
 
 	private Boolean isOrganizationTrail;
 	public GetTrailStatusRequest() {
-		super("Actiontrail", "2020-07-06", "GetTrailStatus", "actiontrail");
+		super("Actiontrail", "2020-07-06", "GetTrailStatus");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);

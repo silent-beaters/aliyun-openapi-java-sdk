@@ -33,11 +33,15 @@ public class ModifyStrategyRequest extends RpcAcsRequest<ModifyStrategyResponse>
 
 	private String id;
 
+	private String riskCustomParams;
+
+	private String customType;
+
 	private String cycleStartTime;
 
 	private String name;
 	public ModifyStrategyRequest() {
-		super("Sas", "2018-12-03", "ModifyStrategy", "sas");
+		super("Sas", "2018-12-03", "ModifyStrategy");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -86,6 +90,28 @@ public class ModifyStrategyRequest extends RpcAcsRequest<ModifyStrategyResponse>
 		this.id = id;
 		if(id != null){
 			putQueryParameter("Id", id);
+		}
+	}
+
+	public String getRiskCustomParams() {
+		return this.riskCustomParams;
+	}
+
+	public void setRiskCustomParams(String riskCustomParams) {
+		this.riskCustomParams = riskCustomParams;
+		if(riskCustomParams != null){
+			putQueryParameter("RiskCustomParams", riskCustomParams);
+		}
+	}
+
+	public String getCustomType() {
+		return this.customType;
+	}
+
+	public void setCustomType(String customType) {
+		this.customType = customType;
+		if(customType != null){
+			putQueryParameter("CustomType", customType);
 		}
 	}
 

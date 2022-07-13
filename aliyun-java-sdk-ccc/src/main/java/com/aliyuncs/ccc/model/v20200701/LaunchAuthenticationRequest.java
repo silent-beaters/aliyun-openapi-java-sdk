@@ -27,6 +27,8 @@ public class LaunchAuthenticationRequest extends RpcAcsRequest<LaunchAuthenticat
 
 	private String contactFlowId;
 
+	private String contactFlowVariables;
+
 	private String userId;
 
 	private String deviceId;
@@ -51,6 +53,17 @@ public class LaunchAuthenticationRequest extends RpcAcsRequest<LaunchAuthenticat
 		this.contactFlowId = contactFlowId;
 		if(contactFlowId != null){
 			putQueryParameter("ContactFlowId", contactFlowId);
+		}
+	}
+
+	public String getContactFlowVariables() {
+		return this.contactFlowVariables;
+	}
+
+	public void setContactFlowVariables(String contactFlowVariables) {
+		this.contactFlowVariables = contactFlowVariables;
+		if(contactFlowVariables != null){
+			putQueryParameter("ContactFlowVariables", contactFlowVariables);
 		}
 	}
 

@@ -42,6 +42,8 @@ public class CreateTransitRouterRequest extends RpcAcsRequest<CreateTransitRoute
 	private Long ownerId;
 
 	private String transitRouterDescription;
+
+	private Boolean supportMulticast;
 	public CreateTransitRouterRequest() {
 		super("Cbn", "2017-09-12", "CreateTransitRouter");
 		setMethod(MethodType.POST);
@@ -147,6 +149,17 @@ public class CreateTransitRouterRequest extends RpcAcsRequest<CreateTransitRoute
 		this.transitRouterDescription = transitRouterDescription;
 		if(transitRouterDescription != null){
 			putQueryParameter("TransitRouterDescription", transitRouterDescription);
+		}
+	}
+
+	public Boolean getSupportMulticast() {
+		return this.supportMulticast;
+	}
+
+	public void setSupportMulticast(Boolean supportMulticast) {
+		this.supportMulticast = supportMulticast;
+		if(supportMulticast != null){
+			putQueryParameter("SupportMulticast", supportMulticast.toString());
 		}
 	}
 

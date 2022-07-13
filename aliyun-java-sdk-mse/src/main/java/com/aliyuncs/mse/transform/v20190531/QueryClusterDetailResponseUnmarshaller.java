@@ -67,6 +67,7 @@ public class QueryClusterDetailResponseUnmarshaller {
 		data.setConnectionType(_ctx.stringValue("QueryClusterDetailResponse.Data.ConnectionType"));
 		data.setMseVersion(_ctx.stringValue("QueryClusterDetailResponse.Data.MseVersion"));
 		data.setChargeType(_ctx.stringValue("QueryClusterDetailResponse.Data.ChargeType"));
+		data.setOrderClusterVersion(_ctx.stringValue("QueryClusterDetailResponse.Data.OrderClusterVersion"));
 
 		List<InstanceModel> instanceModels = new ArrayList<InstanceModel>();
 		for (int i = 0; i < _ctx.lengthValue("QueryClusterDetailResponse.Data.InstanceModels.Length"); i++) {
@@ -78,6 +79,7 @@ public class QueryClusterDetailResponseUnmarshaller {
 			instanceModel.setRole(_ctx.stringValue("QueryClusterDetailResponse.Data.InstanceModels["+ i +"].Role"));
 			instanceModel.setHealthStatus(_ctx.stringValue("QueryClusterDetailResponse.Data.InstanceModels["+ i +"].HealthStatus"));
 			instanceModel.setCreationTimestamp(_ctx.stringValue("QueryClusterDetailResponse.Data.InstanceModels["+ i +"].CreationTimestamp"));
+			instanceModel.setZone(_ctx.stringValue("QueryClusterDetailResponse.Data.InstanceModels["+ i +"].Zone"));
 
 			instanceModels.add(instanceModel);
 		}

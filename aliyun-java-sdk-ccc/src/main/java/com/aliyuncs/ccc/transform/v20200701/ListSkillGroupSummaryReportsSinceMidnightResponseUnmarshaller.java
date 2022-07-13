@@ -96,6 +96,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseUnmarshaller {
 			inbound.setQueueWaitTimeDuration(_ctx.longValue("ListSkillGroupSummaryReportsSinceMidnightResponse.PagedSkillGroupSummaryReport.List["+ i +"].Inbound.QueueWaitTimeDuration"));
 			inbound.setCallsServiceLevel20(_ctx.longValue("ListSkillGroupSummaryReportsSinceMidnightResponse.PagedSkillGroupSummaryReport.List["+ i +"].Inbound.CallsServiceLevel20"));
 			inbound.setCallsServiceLevel30(_ctx.longValue("ListSkillGroupSummaryReportsSinceMidnightResponse.PagedSkillGroupSummaryReport.List["+ i +"].Inbound.CallsServiceLevel30"));
+			inbound.setCallsServiceLevel10(_ctx.longValue("ListSkillGroupSummaryReportsSinceMidnightResponse.PagedSkillGroupSummaryReport.List["+ i +"].Inbound.CallsServiceLevel10"));
+			inbound.setCallsAttendedTransferOut(_ctx.longValue("ListSkillGroupSummaryReportsSinceMidnightResponse.PagedSkillGroupSummaryReport.List["+ i +"].Inbound.CallsAttendedTransferOut"));
+			inbound.setCallsBlindTransferOut(_ctx.longValue("ListSkillGroupSummaryReportsSinceMidnightResponse.PagedSkillGroupSummaryReport.List["+ i +"].Inbound.CallsBlindTransferOut"));
 			skillGroupSummaryReport.setInbound(inbound);
 
 			Outbound outbound = new Outbound();

@@ -149,6 +149,14 @@ public class ListSkillGroupStatesResponse extends AcsResponse {
 
 			private String instanceId;
 
+			private Long averageWaitingTime;
+
+			private Long waitingCallsLevel10;
+
+			private Long waitingCallsLevel20;
+
+			private Long waitingCallsLevel30;
+
 			public Long getWorkingAgents() {
 				return this.workingAgents;
 			}
@@ -227,6 +235,38 @@ public class ListSkillGroupStatesResponse extends AcsResponse {
 
 			public void setInstanceId(String instanceId) {
 				this.instanceId = instanceId;
+			}
+
+			public Long getAverageWaitingTime() {
+				return this.averageWaitingTime;
+			}
+
+			public void setAverageWaitingTime(Long averageWaitingTime) {
+				this.averageWaitingTime = averageWaitingTime;
+			}
+
+			public Long getWaitingCallsLevel10() {
+				return this.waitingCallsLevel10;
+			}
+
+			public void setWaitingCallsLevel10(Long waitingCallsLevel10) {
+				this.waitingCallsLevel10 = waitingCallsLevel10;
+			}
+
+			public Long getWaitingCallsLevel20() {
+				return this.waitingCallsLevel20;
+			}
+
+			public void setWaitingCallsLevel20(Long waitingCallsLevel20) {
+				this.waitingCallsLevel20 = waitingCallsLevel20;
+			}
+
+			public Long getWaitingCallsLevel30() {
+				return this.waitingCallsLevel30;
+			}
+
+			public void setWaitingCallsLevel30(Long waitingCallsLevel30) {
+				this.waitingCallsLevel30 = waitingCallsLevel30;
 			}
 		}
 	}

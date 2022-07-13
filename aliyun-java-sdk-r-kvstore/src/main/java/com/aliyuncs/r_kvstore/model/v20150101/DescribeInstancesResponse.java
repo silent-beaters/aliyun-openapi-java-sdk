@@ -135,8 +135,6 @@ public class DescribeInstancesResponse extends AcsResponse {
 
 		private String regionId;
 
-		private String searchKey;
-
 		private String endTime;
 
 		private String vSwitchId;
@@ -154,6 +152,8 @@ public class DescribeInstancesResponse extends AcsResponse {
 		private Integer proxyCount;
 
 		private String cloudType;
+
+		private String editionType;
 
 		private List<Tag> tags;
 
@@ -389,14 +389,6 @@ public class DescribeInstancesResponse extends AcsResponse {
 			this.regionId = regionId;
 		}
 
-		public String getSearchKey() {
-			return this.searchKey;
-		}
-
-		public void setSearchKey(String searchKey) {
-			this.searchKey = searchKey;
-		}
-
 		public String getEndTime() {
 			return this.endTime;
 		}
@@ -467,6 +459,14 @@ public class DescribeInstancesResponse extends AcsResponse {
 
 		public void setCloudType(String cloudType) {
 			this.cloudType = cloudType;
+		}
+
+		public String getEditionType() {
+			return this.editionType;
+		}
+
+		public void setEditionType(String editionType) {
+			this.editionType = editionType;
 		}
 
 		public List<Tag> getTags() {

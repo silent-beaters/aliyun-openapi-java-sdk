@@ -83,6 +83,16 @@ public class DescribeImagesResponse extends AcsResponse {
 
 		private String gpuDriverVersion;
 
+		private String appVersion;
+
+		private Boolean volumeEncryptionEnabled;
+
+		private String volumeEncryptionKey;
+
+		private Integer sharedCount;
+
+		private String sessionType;
+
 		private List<String> supportedLanguages;
 
 		public String getCreationTime() {
@@ -187,6 +197,46 @@ public class DescribeImagesResponse extends AcsResponse {
 
 		public void setGpuDriverVersion(String gpuDriverVersion) {
 			this.gpuDriverVersion = gpuDriverVersion;
+		}
+
+		public String getAppVersion() {
+			return this.appVersion;
+		}
+
+		public void setAppVersion(String appVersion) {
+			this.appVersion = appVersion;
+		}
+
+		public Boolean getVolumeEncryptionEnabled() {
+			return this.volumeEncryptionEnabled;
+		}
+
+		public void setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+			this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+		}
+
+		public String getVolumeEncryptionKey() {
+			return this.volumeEncryptionKey;
+		}
+
+		public void setVolumeEncryptionKey(String volumeEncryptionKey) {
+			this.volumeEncryptionKey = volumeEncryptionKey;
+		}
+
+		public Integer getSharedCount() {
+			return this.sharedCount;
+		}
+
+		public void setSharedCount(Integer sharedCount) {
+			this.sharedCount = sharedCount;
+		}
+
+		public String getSessionType() {
+			return this.sessionType;
+		}
+
+		public void setSessionType(String sessionType) {
+			this.sessionType = sessionType;
 		}
 
 		public List<String> getSupportedLanguages() {

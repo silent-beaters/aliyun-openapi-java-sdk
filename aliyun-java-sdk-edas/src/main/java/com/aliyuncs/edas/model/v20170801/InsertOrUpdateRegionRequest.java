@@ -25,6 +25,8 @@ import com.aliyuncs.edas.Endpoint;
 public class InsertOrUpdateRegionRequest extends RoaAcsRequest<InsertOrUpdateRegionResponse> {
 	   
 
+	private String registryType;
+
 	private Boolean debugEnable;
 
 	private String regionTag;
@@ -33,7 +35,9 @@ public class InsertOrUpdateRegionRequest extends RoaAcsRequest<InsertOrUpdateReg
 
 	private String description;
 
-	private Long id;
+	private String mseInstanceId;
+
+	private Integer id;
 	public InsertOrUpdateRegionRequest() {
 		super("Edas", "2017-08-01", "InsertOrUpdateRegion", "Edas");
 		setUriPattern("/pop/v5/user_region_def");
@@ -42,6 +46,17 @@ public class InsertOrUpdateRegionRequest extends RoaAcsRequest<InsertOrUpdateReg
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
+	}
+
+	public String getRegistryType() {
+		return this.registryType;
+	}
+
+	public void setRegistryType(String registryType) {
+		this.registryType = registryType;
+		if(registryType != null){
+			putQueryParameter("RegistryType", registryType);
+		}
 	}
 
 	public Boolean getDebugEnable() {
@@ -88,11 +103,22 @@ public class InsertOrUpdateRegionRequest extends RoaAcsRequest<InsertOrUpdateReg
 		}
 	}
 
-	public Long getId() {
+	public String getMseInstanceId() {
+		return this.mseInstanceId;
+	}
+
+	public void setMseInstanceId(String mseInstanceId) {
+		this.mseInstanceId = mseInstanceId;
+		if(mseInstanceId != null){
+			putQueryParameter("MseInstanceId", mseInstanceId);
+		}
+	}
+
+	public Integer getId() {
 		return this.id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 		if(id != null){
 			putQueryParameter("Id", id.toString());

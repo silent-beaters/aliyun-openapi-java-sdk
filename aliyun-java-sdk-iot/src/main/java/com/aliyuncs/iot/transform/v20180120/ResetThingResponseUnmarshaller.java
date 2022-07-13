@@ -26,6 +26,7 @@ public class ResetThingResponseUnmarshaller {
 		resetThingResponse.setSuccess(_ctx.booleanValue("ResetThingResponse.Success"));
 		resetThingResponse.setCode(_ctx.stringValue("ResetThingResponse.Code"));
 		resetThingResponse.setErrorMessage(_ctx.stringValue("ResetThingResponse.ErrorMessage"));
+		resetThingResponse.setJobId(_ctx.stringValue("ResetThingResponse.JobId"));
 	 
 	 	return resetThingResponse;
 	}

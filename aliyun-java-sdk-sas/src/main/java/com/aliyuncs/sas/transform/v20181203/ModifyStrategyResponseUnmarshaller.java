@@ -24,9 +24,9 @@ public class ModifyStrategyResponseUnmarshaller {
 	public static ModifyStrategyResponse unmarshall(ModifyStrategyResponse modifyStrategyResponse, UnmarshallerContext _ctx) {
 		
 		modifyStrategyResponse.setRequestId(_ctx.stringValue("ModifyStrategyResponse.RequestId"));
-		modifyStrategyResponse.setSuccess(_ctx.booleanValue("ModifyStrategyResponse.Success"));
-		modifyStrategyResponse.setTotalCount(_ctx.integerValue("ModifyStrategyResponse.TotalCount"));
 		modifyStrategyResponse.setHttpStatusCode(_ctx.integerValue("ModifyStrategyResponse.HttpStatusCode"));
+		modifyStrategyResponse.setTotalCount(_ctx.integerValue("ModifyStrategyResponse.TotalCount"));
+		modifyStrategyResponse.setSuccess(_ctx.booleanValue("ModifyStrategyResponse.Success"));
 
 		Result result = new Result();
 		result.setStrategyId(_ctx.integerValue("ModifyStrategyResponse.Result.StrategyId"));

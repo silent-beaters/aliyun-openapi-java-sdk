@@ -31,11 +31,11 @@ public class DescribeUuidsByVulNamesResponseUnmarshaller {
 		List<MachineInfoStatistic> machineInfoStatistics = new ArrayList<MachineInfoStatistic>();
 		for (int i = 0; i < _ctx.lengthValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics.Length"); i++) {
 			MachineInfoStatistic machineInfoStatistic = new MachineInfoStatistic();
-			machineInfoStatistic.setMachineIp(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].MachineIp"));
-			machineInfoStatistic.setMachineName(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].MachineName"));
-			machineInfoStatistic.setOs(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].Os"));
-			machineInfoStatistic.setMachineInstanceId(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].MachineInstanceId"));
 			machineInfoStatistic.setUuid(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].Uuid"));
+			machineInfoStatistic.setMachineIp(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].MachineIp"));
+			machineInfoStatistic.setOs(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].Os"));
+			machineInfoStatistic.setMachineName(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].MachineName"));
+			machineInfoStatistic.setMachineInstanceId(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].MachineInstanceId"));
 			machineInfoStatistic.setRegionId(_ctx.stringValue("DescribeUuidsByVulNamesResponse.MachineInfoStatistics["+ i +"].RegionId"));
 
 			machineInfoStatistics.add(machineInfoStatistic);

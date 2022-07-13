@@ -33,6 +33,8 @@ public class DescribeCasterConfigResponse extends AcsResponse {
 
 	private String domainName;
 
+	private String sideOutputUrlList;
+
 	private Float delay;
 
 	private String urgentMaterialId;
@@ -83,6 +85,14 @@ public class DescribeCasterConfigResponse extends AcsResponse {
 
 	public void setDomainName(String domainName) {
 		this.domainName = domainName;
+	}
+
+	public String getSideOutputUrlList() {
+		return this.sideOutputUrlList;
+	}
+
+	public void setSideOutputUrlList(String sideOutputUrlList) {
+		this.sideOutputUrlList = sideOutputUrlList;
 	}
 
 	public Float getDelay() {

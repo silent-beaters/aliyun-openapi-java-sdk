@@ -24,17 +24,9 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class ModifyRuleStatusResponse extends AcsResponse {
 
-	private String requestId;
-
 	private String failedIds;
 
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
+	private String requestId;
 
 	public String getFailedIds() {
 		return this.failedIds;
@@ -42,6 +34,14 @@ public class ModifyRuleStatusResponse extends AcsResponse {
 
 	public void setFailedIds(String failedIds) {
 		this.failedIds = failedIds;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
 	}
 
 	@Override

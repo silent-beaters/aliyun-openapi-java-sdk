@@ -26,29 +26,45 @@ import com.aliyuncs.sas.Endpoint;
 public class DescribeSuspEventsRequest extends RpcAcsRequest<DescribeSuspEventsResponse> {
 	   
 
-	private String targetType;
-
-	private String remark;
-
 	private String source;
 
 	private String containerFieldName;
 
 	private String sourceIp;
 
-	private String containerFieldValue;
-
-	private String pageSize;
+	private String eventNames;
 
 	private String from;
 
-	private String lang;
+	private Long id;
+
+	private String tacticId;
 
 	private String alarmUniqueInfo;
 
 	private String uniqueInfo;
 
 	private Long groupId;
+
+	private String operateTimeEnd;
+
+	private String name;
+
+	private String status;
+
+	private String uuids;
+
+	private String timeEnd;
+
+	private String targetType;
+
+	private String remark;
+
+	private String containerFieldValue;
+
+	private String pageSize;
+
+	private String lang;
 
 	private String dealed;
 
@@ -58,44 +74,20 @@ public class DescribeSuspEventsRequest extends RpcAcsRequest<DescribeSuspEventsR
 
 	private List<String> operateErrorCodeLists;
 
-	private String name;
+	private String operateTimeStart;
+
+	private String timeStart;
 
 	private String levels;
 
 	private String parentEventTypes;
-
-	private String status;
-
-	private String uuids;
 	public DescribeSuspEventsRequest() {
-		super("Sas", "2018-12-03", "DescribeSuspEvents", "sas");
+		super("Sas", "2018-12-03", "DescribeSuspEvents");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
-	}
-
-	public String getTargetType() {
-		return this.targetType;
-	}
-
-	public void setTargetType(String targetType) {
-		this.targetType = targetType;
-		if(targetType != null){
-			putQueryParameter("TargetType", targetType);
-		}
-	}
-
-	public String getRemark() {
-		return this.remark;
-	}
-
-	public void setRemark(String remark) {
-		this.remark = remark;
-		if(remark != null){
-			putQueryParameter("Remark", remark);
-		}
 	}
 
 	public String getSource() {
@@ -131,25 +123,14 @@ public class DescribeSuspEventsRequest extends RpcAcsRequest<DescribeSuspEventsR
 		}
 	}
 
-	public String getContainerFieldValue() {
-		return this.containerFieldValue;
+	public String getEventNames() {
+		return this.eventNames;
 	}
 
-	public void setContainerFieldValue(String containerFieldValue) {
-		this.containerFieldValue = containerFieldValue;
-		if(containerFieldValue != null){
-			putQueryParameter("ContainerFieldValue", containerFieldValue);
-		}
-	}
-
-	public String getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(String pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize);
+	public void setEventNames(String eventNames) {
+		this.eventNames = eventNames;
+		if(eventNames != null){
+			putQueryParameter("EventNames", eventNames);
 		}
 	}
 
@@ -164,14 +145,25 @@ public class DescribeSuspEventsRequest extends RpcAcsRequest<DescribeSuspEventsR
 		}
 	}
 
-	public String getLang() {
-		return this.lang;
+	public Long getId() {
+		return this.id;
 	}
 
-	public void setLang(String lang) {
-		this.lang = lang;
-		if(lang != null){
-			putQueryParameter("Lang", lang);
+	public void setId(Long id) {
+		this.id = id;
+		if(id != null){
+			putQueryParameter("Id", id.toString());
+		}
+	}
+
+	public String getTacticId() {
+		return this.tacticId;
+	}
+
+	public void setTacticId(String tacticId) {
+		this.tacticId = tacticId;
+		if(tacticId != null){
+			putBodyParameter("TacticId", tacticId);
 		}
 	}
 
@@ -205,6 +197,116 @@ public class DescribeSuspEventsRequest extends RpcAcsRequest<DescribeSuspEventsR
 		this.groupId = groupId;
 		if(groupId != null){
 			putQueryParameter("GroupId", groupId.toString());
+		}
+	}
+
+	public String getOperateTimeEnd() {
+		return this.operateTimeEnd;
+	}
+
+	public void setOperateTimeEnd(String operateTimeEnd) {
+		this.operateTimeEnd = operateTimeEnd;
+		if(operateTimeEnd != null){
+			putQueryParameter("OperateTimeEnd", operateTimeEnd);
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
+		}
+	}
+
+	public String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+		if(status != null){
+			putQueryParameter("Status", status);
+		}
+	}
+
+	public String getUuids() {
+		return this.uuids;
+	}
+
+	public void setUuids(String uuids) {
+		this.uuids = uuids;
+		if(uuids != null){
+			putQueryParameter("Uuids", uuids);
+		}
+	}
+
+	public String getTimeEnd() {
+		return this.timeEnd;
+	}
+
+	public void setTimeEnd(String timeEnd) {
+		this.timeEnd = timeEnd;
+		if(timeEnd != null){
+			putQueryParameter("TimeEnd", timeEnd);
+		}
+	}
+
+	public String getTargetType() {
+		return this.targetType;
+	}
+
+	public void setTargetType(String targetType) {
+		this.targetType = targetType;
+		if(targetType != null){
+			putQueryParameter("TargetType", targetType);
+		}
+	}
+
+	public String getRemark() {
+		return this.remark;
+	}
+
+	public void setRemark(String remark) {
+		this.remark = remark;
+		if(remark != null){
+			putQueryParameter("Remark", remark);
+		}
+	}
+
+	public String getContainerFieldValue() {
+		return this.containerFieldValue;
+	}
+
+	public void setContainerFieldValue(String containerFieldValue) {
+		this.containerFieldValue = containerFieldValue;
+		if(containerFieldValue != null){
+			putQueryParameter("ContainerFieldValue", containerFieldValue);
+		}
+	}
+
+	public String getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(String pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize);
+		}
+	}
+
+	public String getLang() {
+		return this.lang;
+	}
+
+	public void setLang(String lang) {
+		this.lang = lang;
+		if(lang != null){
+			putQueryParameter("Lang", lang);
 		}
 	}
 
@@ -254,14 +356,25 @@ public class DescribeSuspEventsRequest extends RpcAcsRequest<DescribeSuspEventsR
 		}	
 	}
 
-	public String getName() {
-		return this.name;
+	public String getOperateTimeStart() {
+		return this.operateTimeStart;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-		if(name != null){
-			putQueryParameter("Name", name);
+	public void setOperateTimeStart(String operateTimeStart) {
+		this.operateTimeStart = operateTimeStart;
+		if(operateTimeStart != null){
+			putQueryParameter("OperateTimeStart", operateTimeStart);
+		}
+	}
+
+	public String getTimeStart() {
+		return this.timeStart;
+	}
+
+	public void setTimeStart(String timeStart) {
+		this.timeStart = timeStart;
+		if(timeStart != null){
+			putQueryParameter("TimeStart", timeStart);
 		}
 	}
 
@@ -284,28 +397,6 @@ public class DescribeSuspEventsRequest extends RpcAcsRequest<DescribeSuspEventsR
 		this.parentEventTypes = parentEventTypes;
 		if(parentEventTypes != null){
 			putQueryParameter("ParentEventTypes", parentEventTypes);
-		}
-	}
-
-	public String getStatus() {
-		return this.status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-		if(status != null){
-			putQueryParameter("Status", status);
-		}
-	}
-
-	public String getUuids() {
-		return this.uuids;
-	}
-
-	public void setUuids(String uuids) {
-		this.uuids = uuids;
-		if(uuids != null){
-			putQueryParameter("Uuids", uuids);
 		}
 	}
 

@@ -418,6 +418,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponse extends AcsRespon
 
 				private Long callsServiceLevel30;
 
+				private Long callsServiceLevel10;
+
+				private Long callsAttendedTransferOut;
+
+				private Long callsBlindTransferOut;
+
 				public Long getAverageRingTime() {
 					return this.averageRingTime;
 				}
@@ -632,6 +638,30 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponse extends AcsRespon
 
 				public void setCallsServiceLevel30(Long callsServiceLevel30) {
 					this.callsServiceLevel30 = callsServiceLevel30;
+				}
+
+				public Long getCallsServiceLevel10() {
+					return this.callsServiceLevel10;
+				}
+
+				public void setCallsServiceLevel10(Long callsServiceLevel10) {
+					this.callsServiceLevel10 = callsServiceLevel10;
+				}
+
+				public Long getCallsAttendedTransferOut() {
+					return this.callsAttendedTransferOut;
+				}
+
+				public void setCallsAttendedTransferOut(Long callsAttendedTransferOut) {
+					this.callsAttendedTransferOut = callsAttendedTransferOut;
+				}
+
+				public Long getCallsBlindTransferOut() {
+					return this.callsBlindTransferOut;
+				}
+
+				public void setCallsBlindTransferOut(Long callsBlindTransferOut) {
+					this.callsBlindTransferOut = callsBlindTransferOut;
 				}
 			}
 

@@ -84,12 +84,14 @@ public class ListTasksResponseUnmarshaller {
 			effectMarketingTask.setTaskType(_ctx.stringValue("ListTasksResponse.Data.List["+ i +"].TaskType"));
 			effectMarketingTask.setPredictInfo(_ctx.stringValue("ListTasksResponse.Data.List["+ i +"].PredictInfo"));
 			effectMarketingTask.setActualInfo(_ctx.stringValue("ListTasksResponse.Data.List["+ i +"].ActualInfo"));
+			effectMarketingTask.setCurrencyType(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].CurrencyType"));
 
 			PredictBankRegisterVO predictBankRegisterVO = new PredictBankRegisterVO();
 			predictBankRegisterVO.setInComingPartsNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].PredictBankRegisterVO.InComingPartsNumber"));
 			predictBankRegisterVO.setVerificationCardNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].PredictBankRegisterVO.VerificationCardNumber"));
 			predictBankRegisterVO.setVisaInterviewNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].PredictBankRegisterVO.VisaInterviewNumber"));
 			predictBankRegisterVO.setSwipingCardNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].PredictBankRegisterVO.SwipingCardNumber"));
+			predictBankRegisterVO.setPlaceOrderNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].PredictBankRegisterVO.PlaceOrderNumber"));
 			effectMarketingTask.setPredictBankRegisterVO(predictBankRegisterVO);
 
 			ActualBankRegisterVO actualBankRegisterVO = new ActualBankRegisterVO();
@@ -97,6 +99,7 @@ public class ListTasksResponseUnmarshaller {
 			actualBankRegisterVO.setVerificationCardNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].ActualBankRegisterVO.VerificationCardNumber"));
 			actualBankRegisterVO.setVisaInterviewNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].ActualBankRegisterVO.VisaInterviewNumber"));
 			actualBankRegisterVO.setSwipingCardNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].ActualBankRegisterVO.SwipingCardNumber"));
+			actualBankRegisterVO.setPlaceOrderNumber(_ctx.longValue("ListTasksResponse.Data.List["+ i +"].ActualBankRegisterVO.PlaceOrderNumber"));
 			effectMarketingTask.setActualBankRegisterVO(actualBankRegisterVO);
 
 			list.add(effectMarketingTask);

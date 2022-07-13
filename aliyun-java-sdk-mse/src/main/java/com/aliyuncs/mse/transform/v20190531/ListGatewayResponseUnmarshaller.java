@@ -20,6 +20,7 @@ import java.util.List;
 import com.aliyuncs.mse.model.v20190531.ListGatewayResponse;
 import com.aliyuncs.mse.model.v20190531.ListGatewayResponse.Data;
 import com.aliyuncs.mse.model.v20190531.ListGatewayResponse.Data.Gateways;
+import com.aliyuncs.mse.model.v20190531.ListGatewayResponse.Data.Gateways.InitConfig;
 import com.aliyuncs.mse.model.v20190531.ListGatewayResponse.Data.Gateways.InternetSlbItem;
 import com.aliyuncs.mse.model.v20190531.ListGatewayResponse.Data.Gateways.SlbItem;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -59,13 +60,22 @@ public class ListGatewayResponseUnmarshaller {
 			gateways.setStatusDesc(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].StatusDesc"));
 			gateways.setUpgrade(_ctx.booleanValue("ListGatewayResponse.Data.Result["+ i +"].Upgrade"));
 			gateways.setMustUpgrade(_ctx.booleanValue("ListGatewayResponse.Data.Result["+ i +"].MustUpgrade"));
+			gateways.setSupportWasm(_ctx.booleanValue("ListGatewayResponse.Data.Result["+ i +"].SupportWasm"));
 			gateways.setCurrentVersion(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].CurrentVersion"));
+			gateways.setAppVersion(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].AppVersion"));
 			gateways.setLatestVersion(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].LatestVersion"));
 			gateways.setVswitch2(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].Vswitch2"));
 			gateways.setInstanceId(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].InstanceId"));
 			gateways.setChargeType(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].ChargeType"));
 			gateways.setEndDate(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].EndDate"));
 			gateways.setTag(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].Tag"));
+			gateways.setGatewayVersion(_ctx.stringValue("ListGatewayResponse.Data.Result["+ i +"].GatewayVersion"));
+			gateways.setRollBack(_ctx.booleanValue("ListGatewayResponse.Data.Result["+ i +"].RollBack"));
+
+			InitConfig initConfig = new InitConfig();
+			initConfig.setEnableWaf(_ctx.booleanValue("ListGatewayResponse.Data.Result["+ i +"].InitConfig.EnableWaf"));
+			initConfig.setSupportWaf(_ctx.booleanValue("ListGatewayResponse.Data.Result["+ i +"].InitConfig.SupportWaf"));
+			gateways.setInitConfig(initConfig);
 
 			List<SlbItem> slb = new ArrayList<SlbItem>();
 			for (int j = 0; j < _ctx.lengthValue("ListGatewayResponse.Data.Result["+ i +"].Slb.Length"); j++) {

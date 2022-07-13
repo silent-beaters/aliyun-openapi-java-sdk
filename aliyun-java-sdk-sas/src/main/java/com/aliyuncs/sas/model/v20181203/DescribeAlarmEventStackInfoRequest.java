@@ -35,7 +35,7 @@ public class DescribeAlarmEventStackInfoRequest extends RpcAcsRequest<DescribeAl
 
 	private String lang;
 	public DescribeAlarmEventStackInfoRequest() {
-		super("Sas", "2018-12-03", "DescribeAlarmEventStackInfo", "sas");
+		super("Sas", "2018-12-03", "DescribeAlarmEventStackInfo");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);

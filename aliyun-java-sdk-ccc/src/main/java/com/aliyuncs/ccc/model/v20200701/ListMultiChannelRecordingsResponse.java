@@ -91,6 +91,12 @@ public class ListMultiChannelRecordingsResponse extends AcsResponse {
 
 		private String duration;
 
+		private String skillGroupId;
+
+		private String ramId;
+
+		private String agentChannelId;
+
 		public String getFileName() {
 			return this.fileName;
 		}
@@ -145,6 +151,30 @@ public class ListMultiChannelRecordingsResponse extends AcsResponse {
 
 		public void setDuration(String duration) {
 			this.duration = duration;
+		}
+
+		public String getSkillGroupId() {
+			return this.skillGroupId;
+		}
+
+		public void setSkillGroupId(String skillGroupId) {
+			this.skillGroupId = skillGroupId;
+		}
+
+		public String getRamId() {
+			return this.ramId;
+		}
+
+		public void setRamId(String ramId) {
+			this.ramId = ramId;
+		}
+
+		public String getAgentChannelId() {
+			return this.agentChannelId;
+		}
+
+		public void setAgentChannelId(String agentChannelId) {
+			this.agentChannelId = agentChannelId;
 		}
 	}
 

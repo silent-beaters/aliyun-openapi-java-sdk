@@ -27,9 +27,13 @@ public class DescribeUsersInGroupRequest extends RpcAcsRequest<DescribeUsersInGr
 
 	private Integer connectState;
 
+	private String filter;
+
 	private String desktopGroupId;
 
 	private String nextToken;
+
+	private Boolean queryUserDetail;
 
 	private Integer maxResults;
 
@@ -54,6 +58,17 @@ public class DescribeUsersInGroupRequest extends RpcAcsRequest<DescribeUsersInGr
 		}
 	}
 
+	public String getFilter() {
+		return this.filter;
+	}
+
+	public void setFilter(String filter) {
+		this.filter = filter;
+		if(filter != null){
+			putQueryParameter("Filter", filter);
+		}
+	}
+
 	public String getDesktopGroupId() {
 		return this.desktopGroupId;
 	}
@@ -73,6 +88,17 @@ public class DescribeUsersInGroupRequest extends RpcAcsRequest<DescribeUsersInGr
 		this.nextToken = nextToken;
 		if(nextToken != null){
 			putQueryParameter("NextToken", nextToken);
+		}
+	}
+
+	public Boolean getQueryUserDetail() {
+		return this.queryUserDetail;
+	}
+
+	public void setQueryUserDetail(Boolean queryUserDetail) {
+		this.queryUserDetail = queryUserDetail;
+		if(queryUserDetail != null){
+			putQueryParameter("QueryUserDetail", queryUserDetail.toString());
 		}
 	}
 

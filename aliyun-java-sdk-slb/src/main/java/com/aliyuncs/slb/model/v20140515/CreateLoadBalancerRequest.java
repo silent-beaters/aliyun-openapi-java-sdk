@@ -55,6 +55,8 @@ public class CreateLoadBalancerRequest extends RpcAcsRequest<CreateLoadBalancerR
 
 	private String addressType;
 
+	private String instanceChargeType;
+
 	private String deleteProtection;
 
 	private Boolean autoPay;
@@ -73,7 +75,7 @@ public class CreateLoadBalancerRequest extends RpcAcsRequest<CreateLoadBalancerR
 
 	private String payType;
 	public CreateLoadBalancerRequest() {
-		super("Slb", "2014-05-15", "CreateLoadBalancer", "Slb");
+		super("Slb", "2014-05-15", "CreateLoadBalancer", "slb");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -243,6 +245,17 @@ public class CreateLoadBalancerRequest extends RpcAcsRequest<CreateLoadBalancerR
 		this.addressType = addressType;
 		if(addressType != null){
 			putQueryParameter("AddressType", addressType);
+		}
+	}
+
+	public String getInstanceChargeType() {
+		return this.instanceChargeType;
+	}
+
+	public void setInstanceChargeType(String instanceChargeType) {
+		this.instanceChargeType = instanceChargeType;
+		if(instanceChargeType != null){
+			putQueryParameter("InstanceChargeType", instanceChargeType);
 		}
 	}
 

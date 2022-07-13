@@ -161,7 +161,11 @@ public class ListGatewayResponse extends AcsResponse {
 
 			private Boolean mustUpgrade;
 
+			private Boolean supportWasm;
+
 			private String currentVersion;
+
+			private String appVersion;
 
 			private String latestVersion;
 
@@ -175,9 +179,15 @@ public class ListGatewayResponse extends AcsResponse {
 
 			private String tag;
 
+			private String gatewayVersion;
+
+			private Boolean rollBack;
+
 			private List<SlbItem> slb;
 
 			private List<InternetSlbItem> internetSlb;
+
+			private InitConfig initConfig;
 
 			public Long getId() {
 				return this.id;
@@ -307,12 +317,28 @@ public class ListGatewayResponse extends AcsResponse {
 				this.mustUpgrade = mustUpgrade;
 			}
 
+			public Boolean getSupportWasm() {
+				return this.supportWasm;
+			}
+
+			public void setSupportWasm(Boolean supportWasm) {
+				this.supportWasm = supportWasm;
+			}
+
 			public String getCurrentVersion() {
 				return this.currentVersion;
 			}
 
 			public void setCurrentVersion(String currentVersion) {
 				this.currentVersion = currentVersion;
+			}
+
+			public String getAppVersion() {
+				return this.appVersion;
+			}
+
+			public void setAppVersion(String appVersion) {
+				this.appVersion = appVersion;
 			}
 
 			public String getLatestVersion() {
@@ -363,6 +389,22 @@ public class ListGatewayResponse extends AcsResponse {
 				this.tag = tag;
 			}
 
+			public String getGatewayVersion() {
+				return this.gatewayVersion;
+			}
+
+			public void setGatewayVersion(String gatewayVersion) {
+				this.gatewayVersion = gatewayVersion;
+			}
+
+			public Boolean getRollBack() {
+				return this.rollBack;
+			}
+
+			public void setRollBack(Boolean rollBack) {
+				this.rollBack = rollBack;
+			}
+
 			public List<SlbItem> getSlb() {
 				return this.slb;
 			}
@@ -377,6 +419,14 @@ public class ListGatewayResponse extends AcsResponse {
 
 			public void setInternetSlb(List<InternetSlbItem> internetSlb) {
 				this.internetSlb = internetSlb;
+			}
+
+			public InitConfig getInitConfig() {
+				return this.initConfig;
+			}
+
+			public void setInitConfig(InitConfig initConfig) {
+				this.initConfig = initConfig;
 			}
 
 			public static class SlbItem {
@@ -552,6 +602,29 @@ public class ListGatewayResponse extends AcsResponse {
 
 				public void setSlbId(String slbId) {
 					this.slbId = slbId;
+				}
+			}
+
+			public static class InitConfig {
+
+				private Boolean enableWaf;
+
+				private Boolean supportWaf;
+
+				public Boolean getEnableWaf() {
+					return this.enableWaf;
+				}
+
+				public void setEnableWaf(Boolean enableWaf) {
+					this.enableWaf = enableWaf;
+				}
+
+				public Boolean getSupportWaf() {
+					return this.supportWaf;
+				}
+
+				public void setSupportWaf(Boolean supportWaf) {
+					this.supportWaf = supportWaf;
 				}
 			}
 		}

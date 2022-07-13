@@ -73,6 +73,8 @@ public class DescribeBundlesResponse extends AcsResponse {
 
 		private String imageId;
 
+		private String imageName;
+
 		private String language;
 
 		private String bundleName;
@@ -80,6 +82,12 @@ public class DescribeBundlesResponse extends AcsResponse {
 		private String desktopTypeFamily;
 
 		private String creationTime;
+
+		private String sessionType;
+
+		private Boolean volumeEncryptionEnabled;
+
+		private String volumeEncryptionKey;
 
 		private List<Disk> disks;
 
@@ -149,6 +157,14 @@ public class DescribeBundlesResponse extends AcsResponse {
 			this.imageId = imageId;
 		}
 
+		public String getImageName() {
+			return this.imageName;
+		}
+
+		public void setImageName(String imageName) {
+			this.imageName = imageName;
+		}
+
 		public String getLanguage() {
 			return this.language;
 		}
@@ -179,6 +195,30 @@ public class DescribeBundlesResponse extends AcsResponse {
 
 		public void setCreationTime(String creationTime) {
 			this.creationTime = creationTime;
+		}
+
+		public String getSessionType() {
+			return this.sessionType;
+		}
+
+		public void setSessionType(String sessionType) {
+			this.sessionType = sessionType;
+		}
+
+		public Boolean getVolumeEncryptionEnabled() {
+			return this.volumeEncryptionEnabled;
+		}
+
+		public void setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+			this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+		}
+
+		public String getVolumeEncryptionKey() {
+			return this.volumeEncryptionKey;
+		}
+
+		public void setVolumeEncryptionKey(String volumeEncryptionKey) {
+			this.volumeEncryptionKey = volumeEncryptionKey;
 		}
 
 		public List<Disk> getDisks() {

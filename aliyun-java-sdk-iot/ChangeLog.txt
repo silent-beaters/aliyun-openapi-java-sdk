@@ -1,3 +1,16 @@
+2022-07-11 Version: 7.41.0
+- Add new api for rule.
+
+2022-06-20 Version: 7.40.0
+- Support Easy Connect New API.
+
+2022-04-22 Version: 7.39.0
+- Iot_20180120 old version sdk.
+
+2022-03-31 Version: 7.38.0
+- CreateDataSourceItem.
+- ListDataSourceItem.
+
 2022-03-25 Version: 7.37.0
 - Iot_20180120 old version sdk.
 

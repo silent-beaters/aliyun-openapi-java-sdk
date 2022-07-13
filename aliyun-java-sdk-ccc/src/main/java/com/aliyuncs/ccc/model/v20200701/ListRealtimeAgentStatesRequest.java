@@ -25,9 +25,17 @@ import com.aliyuncs.ccc.Endpoint;
 public class ListRealtimeAgentStatesRequest extends RpcAcsRequest<ListRealtimeAgentStatesResponse> {
 	   
 
+	private String callTypeList;
+
+	private String query;
+
+	private Boolean outboundScenario;
+
 	private Integer pageNumber;
 
 	private String instanceId;
+
+	private String workModeList;
 
 	private String agentIdList;
 
@@ -45,6 +53,39 @@ public class ListRealtimeAgentStatesRequest extends RpcAcsRequest<ListRealtimeAg
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointRegional").set(this, Endpoint.endpointRegionalType);
 		} catch (Exception e) {}
+	}
+
+	public String getCallTypeList() {
+		return this.callTypeList;
+	}
+
+	public void setCallTypeList(String callTypeList) {
+		this.callTypeList = callTypeList;
+		if(callTypeList != null){
+			putQueryParameter("CallTypeList", callTypeList);
+		}
+	}
+
+	public String getQuery() {
+		return this.query;
+	}
+
+	public void setQuery(String query) {
+		this.query = query;
+		if(query != null){
+			putQueryParameter("Query", query);
+		}
+	}
+
+	public Boolean getOutboundScenario() {
+		return this.outboundScenario;
+	}
+
+	public void setOutboundScenario(Boolean outboundScenario) {
+		this.outboundScenario = outboundScenario;
+		if(outboundScenario != null){
+			putQueryParameter("OutboundScenario", outboundScenario.toString());
+		}
 	}
 
 	public Integer getPageNumber() {
@@ -66,6 +107,17 @@ public class ListRealtimeAgentStatesRequest extends RpcAcsRequest<ListRealtimeAg
 		this.instanceId = instanceId;
 		if(instanceId != null){
 			putQueryParameter("InstanceId", instanceId);
+		}
+	}
+
+	public String getWorkModeList() {
+		return this.workModeList;
+	}
+
+	public void setWorkModeList(String workModeList) {
+		this.workModeList = workModeList;
+		if(workModeList != null){
+			putQueryParameter("WorkModeList", workModeList);
 		}
 	}
 

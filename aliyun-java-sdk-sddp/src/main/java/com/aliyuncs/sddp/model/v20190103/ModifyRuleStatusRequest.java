@@ -33,7 +33,7 @@ public class ModifyRuleStatusRequest extends RpcAcsRequest<ModifyRuleStatusRespo
 
 	private Integer status;
 	public ModifyRuleStatusRequest() {
-		super("Sddp", "2019-01-03", "ModifyRuleStatus");
+		super("Sddp", "2019-01-03", "ModifyRuleStatus", "sddp");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);

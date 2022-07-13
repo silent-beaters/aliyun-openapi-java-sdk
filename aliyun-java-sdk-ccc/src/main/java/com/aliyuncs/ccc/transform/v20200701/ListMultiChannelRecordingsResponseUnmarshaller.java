@@ -41,6 +41,9 @@ public class ListMultiChannelRecordingsResponseUnmarshaller {
 			recordingDTO.setStartTime(_ctx.longValue("ListMultiChannelRecordingsResponse.Data["+ i +"].StartTime"));
 			recordingDTO.setContactId(_ctx.stringValue("ListMultiChannelRecordingsResponse.Data["+ i +"].ContactId"));
 			recordingDTO.setDuration(_ctx.stringValue("ListMultiChannelRecordingsResponse.Data["+ i +"].Duration"));
+			recordingDTO.setSkillGroupId(_ctx.stringValue("ListMultiChannelRecordingsResponse.Data["+ i +"].SkillGroupId"));
+			recordingDTO.setRamId(_ctx.stringValue("ListMultiChannelRecordingsResponse.Data["+ i +"].RamId"));
+			recordingDTO.setAgentChannelId(_ctx.stringValue("ListMultiChannelRecordingsResponse.Data["+ i +"].AgentChannelId"));
 
 			data.add(recordingDTO);
 		}

@@ -27,9 +27,17 @@ public class AddGatewayRequest extends RpcAcsRequest<AddGatewayResponse> {
 
 	private String internetSlbSpec;
 
+	private Boolean enableXtrace;
+
+	private String xtraceRatio;
+
 	private Integer replica;
 
 	private String vSwitchId2;
+
+	private Boolean enableHardwareAcceleration;
+
+	private Boolean enableSls;
 
 	private String spec;
 
@@ -47,7 +55,7 @@ public class AddGatewayRequest extends RpcAcsRequest<AddGatewayResponse> {
 
 	private String region;
 	public AddGatewayRequest() {
-		super("mse", "2019-05-31", "AddGateway");
+		super("mse", "2019-05-31", "AddGateway", "mse");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -63,6 +71,28 @@ public class AddGatewayRequest extends RpcAcsRequest<AddGatewayResponse> {
 		this.internetSlbSpec = internetSlbSpec;
 		if(internetSlbSpec != null){
 			putQueryParameter("InternetSlbSpec", internetSlbSpec);
+		}
+	}
+
+	public Boolean getEnableXtrace() {
+		return this.enableXtrace;
+	}
+
+	public void setEnableXtrace(Boolean enableXtrace) {
+		this.enableXtrace = enableXtrace;
+		if(enableXtrace != null){
+			putQueryParameter("EnableXtrace", enableXtrace.toString());
+		}
+	}
+
+	public String getXtraceRatio() {
+		return this.xtraceRatio;
+	}
+
+	public void setXtraceRatio(String xtraceRatio) {
+		this.xtraceRatio = xtraceRatio;
+		if(xtraceRatio != null){
+			putQueryParameter("XtraceRatio", xtraceRatio);
 		}
 	}
 
@@ -85,6 +115,28 @@ public class AddGatewayRequest extends RpcAcsRequest<AddGatewayResponse> {
 		this.vSwitchId2 = vSwitchId2;
 		if(vSwitchId2 != null){
 			putQueryParameter("VSwitchId2", vSwitchId2);
+		}
+	}
+
+	public Boolean getEnableHardwareAcceleration() {
+		return this.enableHardwareAcceleration;
+	}
+
+	public void setEnableHardwareAcceleration(Boolean enableHardwareAcceleration) {
+		this.enableHardwareAcceleration = enableHardwareAcceleration;
+		if(enableHardwareAcceleration != null){
+			putQueryParameter("EnableHardwareAcceleration", enableHardwareAcceleration.toString());
+		}
+	}
+
+	public Boolean getEnableSls() {
+		return this.enableSls;
+	}
+
+	public void setEnableSls(Boolean enableSls) {
+		this.enableSls = enableSls;
+		if(enableSls != null){
+			putQueryParameter("EnableSls", enableSls.toString());
 		}
 	}
 

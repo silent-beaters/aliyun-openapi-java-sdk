@@ -33,6 +33,7 @@ public class DescribeCasterConfigResponseUnmarshaller {
 		describeCasterConfigResponse.setCasterId(_ctx.stringValue("DescribeCasterConfigResponse.CasterId"));
 		describeCasterConfigResponse.setCasterName(_ctx.stringValue("DescribeCasterConfigResponse.CasterName"));
 		describeCasterConfigResponse.setDomainName(_ctx.stringValue("DescribeCasterConfigResponse.DomainName"));
+		describeCasterConfigResponse.setSideOutputUrlList(_ctx.stringValue("DescribeCasterConfigResponse.SideOutputUrlList"));
 		describeCasterConfigResponse.setDelay(_ctx.floatValue("DescribeCasterConfigResponse.Delay"));
 		describeCasterConfigResponse.setUrgentMaterialId(_ctx.stringValue("DescribeCasterConfigResponse.UrgentMaterialId"));
 		describeCasterConfigResponse.setSideOutputUrl(_ctx.stringValue("DescribeCasterConfigResponse.SideOutputUrl"));

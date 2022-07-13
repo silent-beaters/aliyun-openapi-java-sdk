@@ -14,6 +14,7 @@
 
 package com.aliyuncs.cloudesl.model.v20200201;
 
+import java.util.List;
 import com.aliyuncs.AcsResponse;
 import com.aliyuncs.cloudesl.transform.v20200201.DescribeStoreConfigResponseUnmarshaller;
 import com.aliyuncs.transform.UnmarshallerContext;
@@ -24,23 +25,31 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeStoreConfigResponse extends AcsResponse {
 
-	private String errorMessage;
-
-	private String errorCode;
-
-	private String message;
-
-	private String dynamicCode;
-
-	private String code;
-
-	private String dynamicMessage;
-
 	private String requestId;
+
+	private String errorMessage;
 
 	private Boolean success;
 
+	private String errorCode;
+
+	private String code;
+
+	private String message;
+
+	private String dynamicMessage;
+
+	private String dynamicCode;
+
 	private StoreConfigInfo storeConfigInfo;
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
+	}
 
 	public String getErrorMessage() {
 		return this.errorMessage;
@@ -48,6 +57,14 @@ public class DescribeStoreConfigResponse extends AcsResponse {
 
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
+	}
+
+	public Boolean getSuccess() {
+		return this.success;
+	}
+
+	public void setSuccess(Boolean success) {
+		this.success = success;
 	}
 
 	public String getErrorCode() {
@@ -58,28 +75,20 @@ public class DescribeStoreConfigResponse extends AcsResponse {
 		this.errorCode = errorCode;
 	}
 
-	public String getMessage() {
-		return this.message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public String getDynamicCode() {
-		return this.dynamicCode;
-	}
-
-	public void setDynamicCode(String dynamicCode) {
-		this.dynamicCode = dynamicCode;
-	}
-
 	public String getCode() {
 		return this.code;
 	}
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public String getMessage() {
+		return this.message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	public String getDynamicMessage() {
@@ -90,20 +99,12 @@ public class DescribeStoreConfigResponse extends AcsResponse {
 		this.dynamicMessage = dynamicMessage;
 	}
 
-	public String getRequestId() {
-		return this.requestId;
+	public String getDynamicCode() {
+		return this.dynamicCode;
 	}
 
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
-
-	public Boolean getSuccess() {
-		return this.success;
-	}
-
-	public void setSuccess(Boolean success) {
-		this.success = success;
+	public void setDynamicCode(String dynamicCode) {
+		this.dynamicCode = dynamicCode;
 	}
 
 	public StoreConfigInfo getStoreConfigInfo() {
@@ -116,13 +117,23 @@ public class DescribeStoreConfigResponse extends AcsResponse {
 
 	public static class StoreConfigInfo {
 
+		private String storeId;
+
 		private Boolean enableNotification;
 
 		private String notificationWebHook;
 
 		private String notificationSilentTimes;
 
-		private String storeId;
+		private List<SubscribeContent> subscribeContents;
+
+		public String getStoreId() {
+			return this.storeId;
+		}
+
+		public void setStoreId(String storeId) {
+			this.storeId = storeId;
+		}
 
 		public Boolean getEnableNotification() {
 			return this.enableNotification;
@@ -148,12 +159,65 @@ public class DescribeStoreConfigResponse extends AcsResponse {
 			this.notificationSilentTimes = notificationSilentTimes;
 		}
 
-		public String getStoreId() {
-			return this.storeId;
+		public List<SubscribeContent> getSubscribeContents() {
+			return this.subscribeContents;
 		}
 
-		public void setStoreId(String storeId) {
-			this.storeId = storeId;
+		public void setSubscribeContents(List<SubscribeContent> subscribeContents) {
+			this.subscribeContents = subscribeContents;
+		}
+
+		public static class SubscribeContent {
+
+			private String category;
+
+			private Boolean enable;
+
+			private String threshold;
+
+			private Boolean atAll;
+
+			private String atMobileList;
+
+			public String getCategory() {
+				return this.category;
+			}
+
+			public void setCategory(String category) {
+				this.category = category;
+			}
+
+			public Boolean getEnable() {
+				return this.enable;
+			}
+
+			public void setEnable(Boolean enable) {
+				this.enable = enable;
+			}
+
+			public String getThreshold() {
+				return this.threshold;
+			}
+
+			public void setThreshold(String threshold) {
+				this.threshold = threshold;
+			}
+
+			public Boolean getAtAll() {
+				return this.atAll;
+			}
+
+			public void setAtAll(Boolean atAll) {
+				this.atAll = atAll;
+			}
+
+			public String getAtMobileList() {
+				return this.atMobileList;
+			}
+
+			public void setAtMobileList(String atMobileList) {
+				this.atMobileList = atMobileList;
+			}
 		}
 	}
 

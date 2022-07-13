@@ -25,19 +25,11 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class DescribeRenderingDevicesResponse extends AcsResponse {
 
-	private String requestId;
-
 	private Long total;
 
+	private String requestId;
+
 	private List<Device> devices;
-
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
 
 	public Long getTotal() {
 		return this.total;
@@ -45,6 +37,14 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 
 	public void setTotal(Long total) {
 		this.total = total;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
 	}
 
 	public List<Device> getDevices() {
@@ -57,80 +57,50 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 
 	public static class Device {
 
-		private String instanceId;
-
-		private String clusterId;
-
-		private String description;
-
-		private String edgeNodeName;
-
-		private String platformType;
+		private String status;
 
 		private String specification;
 
-		private String status;
-
-		private String imageId;
-
-		private String instanceName;
-
 		private String macAddress;
 
-		private String serverName;
-
-		private String instanceChargeType;
-
 		private Boolean autoRenew;
+
+		private String instanceId;
 
 		private Integer autoRenewPeriod;
 
 		private Integer period;
 
+		private String instanceChargeType;
+
+		private String serverName;
+
+		private String description;
+
+		private String instanceName;
+
+		private String platformType;
+
 		private String periodUnit;
+
+		private String hostRom;
+
+		private String edgeNodeName;
+
+		private String imageId;
+
+		private String clusterId;
 
 		private List<IpInfo> ipInfos;
 
 		private List<PodInfo> podInfos;
 
-		public String getInstanceId() {
-			return this.instanceId;
+		public String getStatus() {
+			return this.status;
 		}
 
-		public void setInstanceId(String instanceId) {
-			this.instanceId = instanceId;
-		}
-
-		public String getClusterId() {
-			return this.clusterId;
-		}
-
-		public void setClusterId(String clusterId) {
-			this.clusterId = clusterId;
-		}
-
-		public String getDescription() {
-			return this.description;
-		}
-
-		public void setDescription(String description) {
-			this.description = description;
-		}
-
-		public String getEdgeNodeName() {
-			return this.edgeNodeName;
-		}
-
-		public void setEdgeNodeName(String edgeNodeName) {
-			this.edgeNodeName = edgeNodeName;
-		}
-
-		public String getPlatformType() {
-			return this.platformType;
-		}
-
-		public void setPlatformType(String platformType) {
-			this.platformType = platformType;
+		public void setStatus(String status) {
+			this.status = status;
 		}
 
 		public String getSpecification() {
@@ -141,30 +111,6 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 			this.specification = specification;
 		}
 
-		public String getStatus() {
-			return this.status;
-		}
-
-		public void setStatus(String status) {
-			this.status = status;
-		}
-
-		public String getImageId() {
-			return this.imageId;
-		}
-
-		public void setImageId(String imageId) {
-			this.imageId = imageId;
-		}
-
-		public String getInstanceName() {
-			return this.instanceName;
-		}
-
-		public void setInstanceName(String instanceName) {
-			this.instanceName = instanceName;
-		}
-
 		public String getMacAddress() {
 			return this.macAddress;
 		}
@@ -173,28 +119,20 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 			this.macAddress = macAddress;
 		}
 
-		public String getServerName() {
-			return this.serverName;
-		}
-
-		public void setServerName(String serverName) {
-			this.serverName = serverName;
-		}
-
-		public String getInstanceChargeType() {
-			return this.instanceChargeType;
-		}
-
-		public void setInstanceChargeType(String instanceChargeType) {
-			this.instanceChargeType = instanceChargeType;
-		}
-
 		public Boolean getAutoRenew() {
 			return this.autoRenew;
 		}
 
 		public void setAutoRenew(Boolean autoRenew) {
 			this.autoRenew = autoRenew;
+		}
+
+		public String getInstanceId() {
+			return this.instanceId;
+		}
+
+		public void setInstanceId(String instanceId) {
+			this.instanceId = instanceId;
 		}
 
 		public Integer getAutoRenewPeriod() {
@@ -213,12 +151,84 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 			this.period = period;
 		}
 
+		public String getInstanceChargeType() {
+			return this.instanceChargeType;
+		}
+
+		public void setInstanceChargeType(String instanceChargeType) {
+			this.instanceChargeType = instanceChargeType;
+		}
+
+		public String getServerName() {
+			return this.serverName;
+		}
+
+		public void setServerName(String serverName) {
+			this.serverName = serverName;
+		}
+
+		public String getDescription() {
+			return this.description;
+		}
+
+		public void setDescription(String description) {
+			this.description = description;
+		}
+
+		public String getInstanceName() {
+			return this.instanceName;
+		}
+
+		public void setInstanceName(String instanceName) {
+			this.instanceName = instanceName;
+		}
+
+		public String getPlatformType() {
+			return this.platformType;
+		}
+
+		public void setPlatformType(String platformType) {
+			this.platformType = platformType;
+		}
+
 		public String getPeriodUnit() {
 			return this.periodUnit;
 		}
 
 		public void setPeriodUnit(String periodUnit) {
 			this.periodUnit = periodUnit;
+		}
+
+		public String getHostRom() {
+			return this.hostRom;
+		}
+
+		public void setHostRom(String hostRom) {
+			this.hostRom = hostRom;
+		}
+
+		public String getEdgeNodeName() {
+			return this.edgeNodeName;
+		}
+
+		public void setEdgeNodeName(String edgeNodeName) {
+			this.edgeNodeName = edgeNodeName;
+		}
+
+		public String getImageId() {
+			return this.imageId;
+		}
+
+		public void setImageId(String imageId) {
+			this.imageId = imageId;
+		}
+
+		public String getClusterId() {
+			return this.clusterId;
+		}
+
+		public void setClusterId(String clusterId) {
+			this.clusterId = clusterId;
 		}
 
 		public List<IpInfo> getIpInfos() {
@@ -241,15 +251,15 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 
 			private String natType;
 
-			private String externalIp;
-
-			private String externalPort;
-
 			private String internalIp;
 
 			private String internalPort;
 
+			private String externalPort;
+
 			private String ipProtocol;
+
+			private String externalIp;
 
 			private String iSP;
 
@@ -259,22 +269,6 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 
 			public void setNatType(String natType) {
 				this.natType = natType;
-			}
-
-			public String getExternalIp() {
-				return this.externalIp;
-			}
-
-			public void setExternalIp(String externalIp) {
-				this.externalIp = externalIp;
-			}
-
-			public String getExternalPort() {
-				return this.externalPort;
-			}
-
-			public void setExternalPort(String externalPort) {
-				this.externalPort = externalPort;
 			}
 
 			public String getInternalIp() {
@@ -293,12 +287,28 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 				this.internalPort = internalPort;
 			}
 
+			public String getExternalPort() {
+				return this.externalPort;
+			}
+
+			public void setExternalPort(String externalPort) {
+				this.externalPort = externalPort;
+			}
+
 			public String getIpProtocol() {
 				return this.ipProtocol;
 			}
 
 			public void setIpProtocol(String ipProtocol) {
 				this.ipProtocol = ipProtocol;
+			}
+
+			public String getExternalIp() {
+				return this.externalIp;
+			}
+
+			public void setExternalIp(String externalIp) {
+				this.externalIp = externalIp;
 			}
 
 			public String getISP() {
@@ -312,19 +322,13 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 
 		public static class PodInfo {
 
-			private String podId;
-
 			private String status;
 
+			private String podIp;
+
+			private String podId;
+
 			private List<NetworkItem> network;
-
-			public String getPodId() {
-				return this.podId;
-			}
-
-			public void setPodId(String podId) {
-				this.podId = podId;
-			}
 
 			public String getStatus() {
 				return this.status;
@@ -332,6 +336,22 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 
 			public void setStatus(String status) {
 				this.status = status;
+			}
+
+			public String getPodIp() {
+				return this.podIp;
+			}
+
+			public void setPodIp(String podIp) {
+				this.podIp = podIp;
+			}
+
+			public String getPodId() {
+				return this.podId;
+			}
+
+			public void setPodId(String podId) {
+				this.podId = podId;
 			}
 
 			public List<NetworkItem> getNetwork() {
@@ -344,25 +364,17 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 
 			public static class NetworkItem {
 
-				private String externalIp;
-
 				private String containerPorts;
 
+				private String outgoingIsp;
+
 				private String externalPorts;
+
+				private String externalIp;
 
 				private String externalIsp;
 
 				private String outgoingIp;
-
-				private String outgoingIsp;
-
-				public String getExternalIp() {
-					return this.externalIp;
-				}
-
-				public void setExternalIp(String externalIp) {
-					this.externalIp = externalIp;
-				}
 
 				public String getContainerPorts() {
 					return this.containerPorts;
@@ -372,12 +384,28 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 					this.containerPorts = containerPorts;
 				}
 
+				public String getOutgoingIsp() {
+					return this.outgoingIsp;
+				}
+
+				public void setOutgoingIsp(String outgoingIsp) {
+					this.outgoingIsp = outgoingIsp;
+				}
+
 				public String getExternalPorts() {
 					return this.externalPorts;
 				}
 
 				public void setExternalPorts(String externalPorts) {
 					this.externalPorts = externalPorts;
+				}
+
+				public String getExternalIp() {
+					return this.externalIp;
+				}
+
+				public void setExternalIp(String externalIp) {
+					this.externalIp = externalIp;
 				}
 
 				public String getExternalIsp() {
@@ -394,14 +422,6 @@ public class DescribeRenderingDevicesResponse extends AcsResponse {
 
 				public void setOutgoingIp(String outgoingIp) {
 					this.outgoingIp = outgoingIp;
-				}
-
-				public String getOutgoingIsp() {
-					return this.outgoingIsp;
-				}
-
-				public void setOutgoingIsp(String outgoingIsp) {
-					this.outgoingIsp = outgoingIsp;
 				}
 			}
 		}

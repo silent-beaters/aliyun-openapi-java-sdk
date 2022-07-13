@@ -25,19 +25,11 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class GetInstanceIpWhiteListResponse extends AcsResponse {
 
-	private String requestId;
-
 	private String instanceId;
 
+	private String requestId;
+
 	private List<String> ipList;
-
-	public String getRequestId() {
-		return this.requestId;
-	}
-
-	public void setRequestId(String requestId) {
-		this.requestId = requestId;
-	}
 
 	public String getInstanceId() {
 		return this.instanceId;
@@ -45,6 +37,14 @@ public class GetInstanceIpWhiteListResponse extends AcsResponse {
 
 	public void setInstanceId(String instanceId) {
 		this.instanceId = instanceId;
+	}
+
+	public String getRequestId() {
+		return this.requestId;
+	}
+
+	public void setRequestId(String requestId) {
+		this.requestId = requestId;
 	}
 
 	public List<String> getIpList() {

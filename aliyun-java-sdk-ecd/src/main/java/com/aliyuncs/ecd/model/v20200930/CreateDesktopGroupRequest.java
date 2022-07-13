@@ -26,7 +26,11 @@ import com.aliyuncs.ecd.Endpoint;
 public class CreateDesktopGroupRequest extends RpcAcsRequest<CreateDesktopGroupResponse> {
 	   
 
+	private String volumeEncryptionKey;
+
 	private String officeSiteId;
+
+	private String classify;
 
 	private List<String> endUserIdss;
 
@@ -35,6 +39,10 @@ public class CreateDesktopGroupRequest extends RpcAcsRequest<CreateDesktopGroupR
 	private String clientToken;
 
 	private String bundleId;
+
+	private Long bindAmount;
+
+	private Long loadPolicy;
 
 	private String desktopGroupName;
 
@@ -46,7 +54,11 @@ public class CreateDesktopGroupRequest extends RpcAcsRequest<CreateDesktopGroupR
 
 	private Integer minDesktopsCount;
 
+	private Boolean allClassifyUsers;
+
 	private Integer maxDesktopsCount;
+
+	private Boolean volumeEncryptionEnabled;
 
 	private Integer period;
 
@@ -78,6 +90,17 @@ public class CreateDesktopGroupRequest extends RpcAcsRequest<CreateDesktopGroupR
 		} catch (Exception e) {}
 	}
 
+	public String getVolumeEncryptionKey() {
+		return this.volumeEncryptionKey;
+	}
+
+	public void setVolumeEncryptionKey(String volumeEncryptionKey) {
+		this.volumeEncryptionKey = volumeEncryptionKey;
+		if(volumeEncryptionKey != null){
+			putQueryParameter("VolumeEncryptionKey", volumeEncryptionKey);
+		}
+	}
+
 	public String getOfficeSiteId() {
 		return this.officeSiteId;
 	}
@@ -86,6 +109,17 @@ public class CreateDesktopGroupRequest extends RpcAcsRequest<CreateDesktopGroupR
 		this.officeSiteId = officeSiteId;
 		if(officeSiteId != null){
 			putQueryParameter("OfficeSiteId", officeSiteId);
+		}
+	}
+
+	public String getClassify() {
+		return this.classify;
+	}
+
+	public void setClassify(String classify) {
+		this.classify = classify;
+		if(classify != null){
+			putQueryParameter("Classify", classify);
 		}
 	}
 
@@ -132,6 +166,28 @@ public class CreateDesktopGroupRequest extends RpcAcsRequest<CreateDesktopGroupR
 		this.bundleId = bundleId;
 		if(bundleId != null){
 			putQueryParameter("BundleId", bundleId);
+		}
+	}
+
+	public Long getBindAmount() {
+		return this.bindAmount;
+	}
+
+	public void setBindAmount(Long bindAmount) {
+		this.bindAmount = bindAmount;
+		if(bindAmount != null){
+			putQueryParameter("BindAmount", bindAmount.toString());
+		}
+	}
+
+	public Long getLoadPolicy() {
+		return this.loadPolicy;
+	}
+
+	public void setLoadPolicy(Long loadPolicy) {
+		this.loadPolicy = loadPolicy;
+		if(loadPolicy != null){
+			putQueryParameter("LoadPolicy", loadPolicy.toString());
 		}
 	}
 
@@ -190,6 +246,17 @@ public class CreateDesktopGroupRequest extends RpcAcsRequest<CreateDesktopGroupR
 		}
 	}
 
+	public Boolean getAllClassifyUsers() {
+		return this.allClassifyUsers;
+	}
+
+	public void setAllClassifyUsers(Boolean allClassifyUsers) {
+		this.allClassifyUsers = allClassifyUsers;
+		if(allClassifyUsers != null){
+			putQueryParameter("AllClassifyUsers", allClassifyUsers.toString());
+		}
+	}
+
 	public Integer getMaxDesktopsCount() {
 		return this.maxDesktopsCount;
 	}
@@ -198,6 +265,17 @@ public class CreateDesktopGroupRequest extends RpcAcsRequest<CreateDesktopGroupR
 		this.maxDesktopsCount = maxDesktopsCount;
 		if(maxDesktopsCount != null){
 			putQueryParameter("MaxDesktopsCount", maxDesktopsCount.toString());
+		}
+	}
+
+	public Boolean getVolumeEncryptionEnabled() {
+		return this.volumeEncryptionEnabled;
+	}
+
+	public void setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+		this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+		if(volumeEncryptionEnabled != null){
+			putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled.toString());
 		}
 	}
 

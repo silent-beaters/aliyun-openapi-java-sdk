@@ -43,6 +43,10 @@ public class CreateFlowlogRequest extends RpcAcsRequest<CreateFlowlogResponse> {
 
 	private Long ownerId;
 
+	private String transitRouterAttachmentId;
+
+	private Long interval;
+
 	private String flowLogName;
 	public CreateFlowlogRequest() {
 		super("Cbn", "2017-09-12", "CreateFlowlog");
@@ -149,6 +153,28 @@ public class CreateFlowlogRequest extends RpcAcsRequest<CreateFlowlogResponse> {
 		this.ownerId = ownerId;
 		if(ownerId != null){
 			putQueryParameter("OwnerId", ownerId.toString());
+		}
+	}
+
+	public String getTransitRouterAttachmentId() {
+		return this.transitRouterAttachmentId;
+	}
+
+	public void setTransitRouterAttachmentId(String transitRouterAttachmentId) {
+		this.transitRouterAttachmentId = transitRouterAttachmentId;
+		if(transitRouterAttachmentId != null){
+			putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
+		}
+	}
+
+	public Long getInterval() {
+		return this.interval;
+	}
+
+	public void setInterval(Long interval) {
+		this.interval = interval;
+		if(interval != null){
+			putQueryParameter("Interval", interval.toString());
 		}
 	}
 

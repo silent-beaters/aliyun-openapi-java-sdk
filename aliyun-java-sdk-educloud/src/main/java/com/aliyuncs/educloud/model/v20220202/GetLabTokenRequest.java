@@ -27,8 +27,6 @@ public class GetLabTokenRequest extends RpcAcsRequest<GetLabTokenResponse> {
 	private String ramUid;
 
 	private String labId;
-
-	private String accountTagCode;
 	public GetLabTokenRequest() {
 		super("EduCloud", "2022-02-02", "GetLabToken");
 		setMethod(MethodType.GET);
@@ -53,17 +51,6 @@ public class GetLabTokenRequest extends RpcAcsRequest<GetLabTokenResponse> {
 		this.labId = labId;
 		if(labId != null){
 			putQueryParameter("LabId", labId);
-		}
-	}
-
-	public String getAccountTagCode() {
-		return this.accountTagCode;
-	}
-
-	public void setAccountTagCode(String accountTagCode) {
-		this.accountTagCode = accountTagCode;
-		if(accountTagCode != null){
-			putQueryParameter("AccountTagCode", accountTagCode);
 		}
 	}
 

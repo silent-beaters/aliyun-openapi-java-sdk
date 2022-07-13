@@ -41,6 +41,8 @@ public class ListMonoRecordingsResponseUnmarshaller {
 			recordingDTO.setStartTime(_ctx.stringValue("ListMonoRecordingsResponse.Data["+ i +"].StartTime"));
 			recordingDTO.setContactId(_ctx.stringValue("ListMonoRecordingsResponse.Data["+ i +"].ContactId"));
 			recordingDTO.setDuration(_ctx.stringValue("ListMonoRecordingsResponse.Data["+ i +"].Duration"));
+			recordingDTO.setSkillGroupId(_ctx.stringValue("ListMonoRecordingsResponse.Data["+ i +"].SkillGroupId"));
+			recordingDTO.setRamId(_ctx.stringValue("ListMonoRecordingsResponse.Data["+ i +"].RamId"));
 
 			data.add(recordingDTO);
 		}

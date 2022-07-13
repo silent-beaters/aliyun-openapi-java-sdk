@@ -35,9 +35,11 @@ public class CreateEngineNamespaceRequest extends RpcAcsRequest<CreateEngineName
 
 	private String acceptLanguage;
 
+	private String id;
+
 	private String desc;
 	public CreateEngineNamespaceRequest() {
-		super("mse", "2019-05-31", "CreateEngineNamespace");
+		super("mse", "2019-05-31", "CreateEngineNamespace", "mse");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -97,6 +99,17 @@ public class CreateEngineNamespaceRequest extends RpcAcsRequest<CreateEngineName
 		this.acceptLanguage = acceptLanguage;
 		if(acceptLanguage != null){
 			putQueryParameter("AcceptLanguage", acceptLanguage);
+		}
+	}
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+		if(id != null){
+			putQueryParameter("Id", id);
 		}
 	}
 

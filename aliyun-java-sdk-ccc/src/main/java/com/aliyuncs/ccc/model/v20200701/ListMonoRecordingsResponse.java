@@ -91,6 +91,10 @@ public class ListMonoRecordingsResponse extends AcsResponse {
 
 		private String duration;
 
+		private String skillGroupId;
+
+		private String ramId;
+
 		public String getFileName() {
 			return this.fileName;
 		}
@@ -145,6 +149,22 @@ public class ListMonoRecordingsResponse extends AcsResponse {
 
 		public void setDuration(String duration) {
 			this.duration = duration;
+		}
+
+		public String getSkillGroupId() {
+			return this.skillGroupId;
+		}
+
+		public void setSkillGroupId(String skillGroupId) {
+			this.skillGroupId = skillGroupId;
+		}
+
+		public String getRamId() {
+			return this.ramId;
+		}
+
+		public void setRamId(String ramId) {
+			this.ramId = ramId;
 		}
 	}
 

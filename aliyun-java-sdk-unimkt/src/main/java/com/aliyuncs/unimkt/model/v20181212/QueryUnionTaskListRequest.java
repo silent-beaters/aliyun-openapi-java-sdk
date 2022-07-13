@@ -27,17 +27,17 @@ public class QueryUnionTaskListRequest extends RpcAcsRequest<QueryUnionTaskListR
 
 	private Long brandUserId;
 
-	private Integer pageSize;
-
 	private String brandUserNick;
-
-	private Integer pageIndex;
 
 	private Long proxyUserId;
 
+	private Integer pageSize;
+
+	private Integer pageIndex;
+
 	private String channelId;
 	public QueryUnionTaskListRequest() {
-		super("UniMkt", "2018-12-12", "QueryUnionTaskList");
+		super("UniMkt", "2018-12-12", "QueryUnionTaskList", "1.0.0");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -56,17 +56,6 @@ public class QueryUnionTaskListRequest extends RpcAcsRequest<QueryUnionTaskListR
 		}
 	}
 
-	public Integer getPageSize() {
-		return this.pageSize;
-	}
-
-	public void setPageSize(Integer pageSize) {
-		this.pageSize = pageSize;
-		if(pageSize != null){
-			putQueryParameter("PageSize", pageSize.toString());
-		}
-	}
-
 	public String getBrandUserNick() {
 		return this.brandUserNick;
 	}
@@ -78,17 +67,6 @@ public class QueryUnionTaskListRequest extends RpcAcsRequest<QueryUnionTaskListR
 		}
 	}
 
-	public Integer getPageIndex() {
-		return this.pageIndex;
-	}
-
-	public void setPageIndex(Integer pageIndex) {
-		this.pageIndex = pageIndex;
-		if(pageIndex != null){
-			putQueryParameter("PageIndex", pageIndex.toString());
-		}
-	}
-
 	public Long getProxyUserId() {
 		return this.proxyUserId;
 	}
@@ -97,6 +75,28 @@ public class QueryUnionTaskListRequest extends RpcAcsRequest<QueryUnionTaskListR
 		this.proxyUserId = proxyUserId;
 		if(proxyUserId != null){
 			putQueryParameter("ProxyUserId", proxyUserId.toString());
+		}
+	}
+
+	public Integer getPageSize() {
+		return this.pageSize;
+	}
+
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+		if(pageSize != null){
+			putQueryParameter("PageSize", pageSize.toString());
+		}
+	}
+
+	public Integer getPageIndex() {
+		return this.pageIndex;
+	}
+
+	public void setPageIndex(Integer pageIndex) {
+		this.pageIndex = pageIndex;
+		if(pageIndex != null){
+			putQueryParameter("PageIndex", pageIndex.toString());
 		}
 	}
 

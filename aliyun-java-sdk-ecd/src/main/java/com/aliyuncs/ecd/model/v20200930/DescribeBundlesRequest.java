@@ -38,6 +38,10 @@ public class DescribeBundlesRequest extends RpcAcsRequest<DescribeBundlesRespons
 
 	private String bundleType;
 
+	private String fotaChannel;
+
+	private Boolean volumeEncryptionEnabled;
+
 	private Integer memorySize;
 
 	private Integer maxResults;
@@ -47,6 +51,8 @@ public class DescribeBundlesRequest extends RpcAcsRequest<DescribeBundlesRespons
 	private String protocolType;
 
 	private Integer cpuCount;
+
+	private Boolean supportMultiSession;
 	public DescribeBundlesRequest() {
 		super("ecd", "2020-09-30", "DescribeBundles");
 		setMethod(MethodType.POST);
@@ -124,6 +130,28 @@ public class DescribeBundlesRequest extends RpcAcsRequest<DescribeBundlesRespons
 		}
 	}
 
+	public String getFotaChannel() {
+		return this.fotaChannel;
+	}
+
+	public void setFotaChannel(String fotaChannel) {
+		this.fotaChannel = fotaChannel;
+		if(fotaChannel != null){
+			putQueryParameter("FotaChannel", fotaChannel);
+		}
+	}
+
+	public Boolean getVolumeEncryptionEnabled() {
+		return this.volumeEncryptionEnabled;
+	}
+
+	public void setVolumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
+		this.volumeEncryptionEnabled = volumeEncryptionEnabled;
+		if(volumeEncryptionEnabled != null){
+			putQueryParameter("VolumeEncryptionEnabled", volumeEncryptionEnabled.toString());
+		}
+	}
+
 	public Integer getMemorySize() {
 		return this.memorySize;
 	}
@@ -176,6 +204,17 @@ public class DescribeBundlesRequest extends RpcAcsRequest<DescribeBundlesRespons
 		this.cpuCount = cpuCount;
 		if(cpuCount != null){
 			putQueryParameter("CpuCount", cpuCount.toString());
+		}
+	}
+
+	public Boolean getSupportMultiSession() {
+		return this.supportMultiSession;
+	}
+
+	public void setSupportMultiSession(Boolean supportMultiSession) {
+		this.supportMultiSession = supportMultiSession;
+		if(supportMultiSession != null){
+			putQueryParameter("SupportMultiSession", supportMultiSession.toString());
 		}
 	}
 

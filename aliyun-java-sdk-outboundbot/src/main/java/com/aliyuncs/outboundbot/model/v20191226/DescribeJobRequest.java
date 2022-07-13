@@ -28,6 +28,8 @@ public class DescribeJobRequest extends RpcAcsRequest<DescribeJobResponse> {
 	private String jobId;
 
 	private String instanceId;
+
+	private Boolean withScript;
 	public DescribeJobRequest() {
 		super("OutboundBot", "2019-12-26", "DescribeJob", "outboundbot");
 		setMethod(MethodType.POST);
@@ -56,6 +58,17 @@ public class DescribeJobRequest extends RpcAcsRequest<DescribeJobResponse> {
 		this.instanceId = instanceId;
 		if(instanceId != null){
 			putQueryParameter("InstanceId", instanceId);
+		}
+	}
+
+	public Boolean getWithScript() {
+		return this.withScript;
+	}
+
+	public void setWithScript(Boolean withScript) {
+		this.withScript = withScript;
+		if(withScript != null){
+			putQueryParameter("WithScript", withScript.toString());
 		}
 	}
 

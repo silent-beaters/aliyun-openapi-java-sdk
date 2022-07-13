@@ -27,9 +27,13 @@ public class CreateDataLimitRequest extends RpcAcsRequest<CreateDataLimitRespons
 
 	private Integer ocrStatus;
 
+	private Integer samplingSize;
+
 	private String parentId;
 
 	private String password;
+
+	private Integer enable;
 
 	private String lang;
 
@@ -51,7 +55,7 @@ public class CreateDataLimitRequest extends RpcAcsRequest<CreateDataLimitRespons
 
 	private String userName;
 	public CreateDataLimitRequest() {
-		super("Sddp", "2019-01-03", "CreateDataLimit");
+		super("Sddp", "2019-01-03", "CreateDataLimit", "sddp");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -67,6 +71,17 @@ public class CreateDataLimitRequest extends RpcAcsRequest<CreateDataLimitRespons
 		this.ocrStatus = ocrStatus;
 		if(ocrStatus != null){
 			putQueryParameter("OcrStatus", ocrStatus.toString());
+		}
+	}
+
+	public Integer getSamplingSize() {
+		return this.samplingSize;
+	}
+
+	public void setSamplingSize(Integer samplingSize) {
+		this.samplingSize = samplingSize;
+		if(samplingSize != null){
+			putQueryParameter("SamplingSize", samplingSize.toString());
 		}
 	}
 
@@ -89,6 +104,17 @@ public class CreateDataLimitRequest extends RpcAcsRequest<CreateDataLimitRespons
 		this.password = password;
 		if(password != null){
 			putQueryParameter("Password", password);
+		}
+	}
+
+	public Integer getEnable() {
+		return this.enable;
+	}
+
+	public void setEnable(Integer enable) {
+		this.enable = enable;
+		if(enable != null){
+			putQueryParameter("Enable", enable.toString());
 		}
 	}
 

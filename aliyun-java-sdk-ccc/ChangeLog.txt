@@ -1,3 +1,30 @@
+2022-06-30 Version: 2.6.1
+- Supported ListAgentStates params query.
+
+2022-06-15 Version: 2.6.0
+- Supported GetConversationByContactId apis.
+
+2022-06-14 Version: 1.0.36
+- Modify the return field of the GetRoutePoint api.
+
+2022-04-29 Version: 1.0.35
+- Modify SkillGroup basic information for ModifySkillGroupBasicInfo.
+
+2022-04-26 Version: 2.4.3
+- Support to pass variables to authentication IVR.
+
+2022-04-22 Version: 2.4.2
+- Supported EndConference.
+- Supported StartConference.
+- Supported SignInGroup.
+- Supported RemovePhoneNumbers.
+
+2022-04-20 Version: 2.4.1
+- Supported ListMultiChannelRecordings.
+
+2022-04-11 Version: 1.0.34
+- Add user info for AssignUsersResponse.
+
 2022-03-28 Version: 2.3.6
 - Supported CallsServiceLevel30.
 

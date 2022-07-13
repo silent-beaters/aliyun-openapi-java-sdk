@@ -24,15 +24,23 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class ModifyStrategyResponse extends AcsResponse {
 
-	private String requestId;
+	private Integer httpStatusCode;
 
-	private Boolean success;
+	private String requestId;
 
 	private Integer totalCount;
 
-	private Integer httpStatusCode;
+	private Boolean success;
 
 	private Result result;
+
+	public Integer getHttpStatusCode() {
+		return this.httpStatusCode;
+	}
+
+	public void setHttpStatusCode(Integer httpStatusCode) {
+		this.httpStatusCode = httpStatusCode;
+	}
 
 	public String getRequestId() {
 		return this.requestId;
@@ -40,14 +48,6 @@ public class ModifyStrategyResponse extends AcsResponse {
 
 	public void setRequestId(String requestId) {
 		this.requestId = requestId;
-	}
-
-	public Boolean getSuccess() {
-		return this.success;
-	}
-
-	public void setSuccess(Boolean success) {
-		this.success = success;
 	}
 
 	public Integer getTotalCount() {
@@ -58,12 +58,12 @@ public class ModifyStrategyResponse extends AcsResponse {
 		this.totalCount = totalCount;
 	}
 
-	public Integer getHttpStatusCode() {
-		return this.httpStatusCode;
+	public Boolean getSuccess() {
+		return this.success;
 	}
 
-	public void setHttpStatusCode(Integer httpStatusCode) {
-		this.httpStatusCode = httpStatusCode;
+	public void setSuccess(Boolean success) {
+		this.success = success;
 	}
 
 	public Result getResult() {

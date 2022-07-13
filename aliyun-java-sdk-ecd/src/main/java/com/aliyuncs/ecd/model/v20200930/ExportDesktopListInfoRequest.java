@@ -32,8 +32,6 @@ public class ExportDesktopListInfoRequest extends RpcAcsRequest<ExportDesktopLis
 
 	private String nextToken;
 
-	private String directoryId;
-
 	private List<String> endUserIds;
 
 	private List<String> desktopIds;
@@ -45,6 +43,8 @@ public class ExportDesktopListInfoRequest extends RpcAcsRequest<ExportDesktopLis
 	private String expiredTime;
 
 	private Integer maxResults;
+
+	private String langType;
 
 	private String chargeType;
 
@@ -90,17 +90,6 @@ public class ExportDesktopListInfoRequest extends RpcAcsRequest<ExportDesktopLis
 		this.nextToken = nextToken;
 		if(nextToken != null){
 			putQueryParameter("NextToken", nextToken);
-		}
-	}
-
-	public String getDirectoryId() {
-		return this.directoryId;
-	}
-
-	public void setDirectoryId(String directoryId) {
-		this.directoryId = directoryId;
-		if(directoryId != null){
-			putQueryParameter("DirectoryId", directoryId);
 		}
 	}
 
@@ -171,6 +160,17 @@ public class ExportDesktopListInfoRequest extends RpcAcsRequest<ExportDesktopLis
 		this.maxResults = maxResults;
 		if(maxResults != null){
 			putQueryParameter("MaxResults", maxResults.toString());
+		}
+	}
+
+	public String getLangType() {
+		return this.langType;
+	}
+
+	public void setLangType(String langType) {
+		this.langType = langType;
+		if(langType != null){
+			putQueryParameter("LangType", langType);
 		}
 	}
 

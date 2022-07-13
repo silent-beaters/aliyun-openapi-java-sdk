@@ -32,27 +32,27 @@ public class DescribeExposedInstanceDetailResponseUnmarshaller {
 		List<ExposedChain> exposedChains = new ArrayList<ExposedChain>();
 		for (int i = 0; i < _ctx.lengthValue("DescribeExposedInstanceDetailResponse.ExposedChains.Length"); i++) {
 			ExposedChain exposedChain = new ExposedChain();
-			exposedChain.setUuid(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].Uuid"));
-			exposedChain.setIntranetIp(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].IntranetIp"));
-			exposedChain.setInternetIp(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].InternetIp"));
-			exposedChain.setExposureComponent(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposureComponent"));
-			exposedChain.setExposureType(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposureType"));
-			exposedChain.setExposurePort(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposurePort"));
 			exposedChain.setExposureIp(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposureIp"));
-			exposedChain.setExposureTypeId(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposureTypeId"));
-			exposedChain.setInstanceId(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].InstanceId"));
-			exposedChain.setInstanceName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].InstanceName"));
-			exposedChain.setRegionId(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RegionId"));
 			exposedChain.setGroupNo(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].GroupNo"));
+			exposedChain.setInternetIp(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].InternetIp"));
+			exposedChain.setInstanceId(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].InstanceId"));
+			exposedChain.setExposureType(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposureType"));
+			exposedChain.setIntranetIp(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].IntranetIp"));
+			exposedChain.setExposureTypeId(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposureTypeId"));
+			exposedChain.setRegionId(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RegionId"));
+			exposedChain.setUuid(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].Uuid"));
+			exposedChain.setExposurePort(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposurePort"));
+			exposedChain.setInstanceName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].InstanceName"));
+			exposedChain.setExposureComponent(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].ExposureComponent"));
 
 			List<ScaVulRecord> realVulList = new ArrayList<ScaVulRecord>();
 			for (int j = 0; j < _ctx.lengthValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList.Length"); j++) {
 				ScaVulRecord scaVulRecord = new ScaVulRecord();
-				scaVulRecord.setAliasName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList["+ j +"].AliasName"));
-				scaVulRecord.setNecessity(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList["+ j +"].Necessity"));
-				scaVulRecord.setName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList["+ j +"].Name"));
 				scaVulRecord.setType(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList["+ j +"].Type"));
+				scaVulRecord.setNecessity(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList["+ j +"].Necessity"));
 				scaVulRecord.setUuid(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList["+ j +"].Uuid"));
+				scaVulRecord.setAliasName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList["+ j +"].AliasName"));
+				scaVulRecord.setName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].RealVulList["+ j +"].Name"));
 
 				realVulList.add(scaVulRecord);
 			}
@@ -60,14 +60,14 @@ public class DescribeExposedInstanceDetailResponseUnmarshaller {
 
 			List<ScaVulRecord> allVulList = new ArrayList<ScaVulRecord>();
 			for (int j = 0; j < _ctx.lengthValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList.Length"); j++) {
-				ScaVulRecord scaVulRecord_ = new ScaVulRecord();
-				scaVulRecord_.setAliasName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].AliasName"));
-				scaVulRecord_.setNecessity(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].Necessity"));
-				scaVulRecord_.setName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].Name"));
-				scaVulRecord_.setType(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].Type"));
-				scaVulRecord_.setUuid(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].Uuid"));
+				ScaVulRecord scaVulRecord1 = new ScaVulRecord();
+				scaVulRecord1.setType(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].Type"));
+				scaVulRecord1.setNecessity(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].Necessity"));
+				scaVulRecord1.setUuid(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].Uuid"));
+				scaVulRecord1.setAliasName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].AliasName"));
+				scaVulRecord1.setName(_ctx.stringValue("DescribeExposedInstanceDetailResponse.ExposedChains["+ i +"].AllVulList["+ j +"].Name"));
 
-				allVulList.add(scaVulRecord_);
+				allVulList.add(scaVulRecord1);
 			}
 			exposedChain.setAllVulList(allVulList);
 

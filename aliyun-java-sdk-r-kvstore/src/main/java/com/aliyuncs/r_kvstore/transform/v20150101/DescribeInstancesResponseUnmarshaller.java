@@ -64,7 +64,6 @@ public class DescribeInstancesResponseUnmarshaller {
 			kVStoreInstance.setInstanceType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceType"));
 			kVStoreInstance.setHasRenewChangeOrder(_ctx.booleanValue("DescribeInstancesResponse.Instances["+ i +"].HasRenewChangeOrder"));
 			kVStoreInstance.setRegionId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].RegionId"));
-			kVStoreInstance.setSearchKey(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].SearchKey"));
 			kVStoreInstance.setEndTime(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].EndTime"));
 			kVStoreInstance.setVSwitchId(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].VSwitchId"));
 			kVStoreInstance.setNodeType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].NodeType"));
@@ -74,6 +73,7 @@ public class DescribeInstancesResponseUnmarshaller {
 			kVStoreInstance.setInstanceStatus(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].InstanceStatus"));
 			kVStoreInstance.setProxyCount(_ctx.integerValue("DescribeInstancesResponse.Instances["+ i +"].ProxyCount"));
 			kVStoreInstance.setCloudType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].CloudType"));
+			kVStoreInstance.setEditionType(_ctx.stringValue("DescribeInstancesResponse.Instances["+ i +"].EditionType"));
 
 			List<Tag> tags = new ArrayList<Tag>();
 			for (int j = 0; j < _ctx.lengthValue("DescribeInstancesResponse.Instances["+ i +"].Tags.Length"); j++) {

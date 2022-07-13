@@ -47,17 +47,25 @@ public class DescribeUuidsByVulNamesResponse extends AcsResponse {
 
 	public static class MachineInfoStatistic {
 
-		private String machineIp;
+		private String uuid;
 
-		private String machineName;
+		private String machineIp;
 
 		private String os;
 
+		private String machineName;
+
 		private String machineInstanceId;
 
-		private String uuid;
-
 		private String regionId;
+
+		public String getUuid() {
+			return this.uuid;
+		}
+
+		public void setUuid(String uuid) {
+			this.uuid = uuid;
+		}
 
 		public String getMachineIp() {
 			return this.machineIp;
@@ -65,14 +73,6 @@ public class DescribeUuidsByVulNamesResponse extends AcsResponse {
 
 		public void setMachineIp(String machineIp) {
 			this.machineIp = machineIp;
-		}
-
-		public String getMachineName() {
-			return this.machineName;
-		}
-
-		public void setMachineName(String machineName) {
-			this.machineName = machineName;
 		}
 
 		public String getOs() {
@@ -83,20 +83,20 @@ public class DescribeUuidsByVulNamesResponse extends AcsResponse {
 			this.os = os;
 		}
 
+		public String getMachineName() {
+			return this.machineName;
+		}
+
+		public void setMachineName(String machineName) {
+			this.machineName = machineName;
+		}
+
 		public String getMachineInstanceId() {
 			return this.machineInstanceId;
 		}
 
 		public void setMachineInstanceId(String machineInstanceId) {
 			this.machineInstanceId = machineInstanceId;
-		}
-
-		public String getUuid() {
-			return this.uuid;
-		}
-
-		public void setUuid(String uuid) {
-			this.uuid = uuid;
 		}
 
 		public String getRegionId() {

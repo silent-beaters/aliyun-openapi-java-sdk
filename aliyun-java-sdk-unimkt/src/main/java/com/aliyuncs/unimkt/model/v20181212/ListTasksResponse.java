@@ -211,6 +211,8 @@ public class ListTasksResponse extends AcsResponse {
 
 			private String actualInfo;
 
+			private Long currencyType;
+
 			private PredictBankRegisterVO predictBankRegisterVO;
 
 			private ActualBankRegisterVO actualBankRegisterVO;
@@ -543,6 +545,14 @@ public class ListTasksResponse extends AcsResponse {
 				this.actualInfo = actualInfo;
 			}
 
+			public Long getCurrencyType() {
+				return this.currencyType;
+			}
+
+			public void setCurrencyType(Long currencyType) {
+				this.currencyType = currencyType;
+			}
+
 			public PredictBankRegisterVO getPredictBankRegisterVO() {
 				return this.predictBankRegisterVO;
 			}
@@ -569,6 +579,8 @@ public class ListTasksResponse extends AcsResponse {
 
 				private Long swipingCardNumber;
 
+				private Long placeOrderNumber;
+
 				public Long getInComingPartsNumber() {
 					return this.inComingPartsNumber;
 				}
@@ -599,6 +611,14 @@ public class ListTasksResponse extends AcsResponse {
 
 				public void setSwipingCardNumber(Long swipingCardNumber) {
 					this.swipingCardNumber = swipingCardNumber;
+				}
+
+				public Long getPlaceOrderNumber() {
+					return this.placeOrderNumber;
+				}
+
+				public void setPlaceOrderNumber(Long placeOrderNumber) {
+					this.placeOrderNumber = placeOrderNumber;
 				}
 			}
 
@@ -612,6 +632,8 @@ public class ListTasksResponse extends AcsResponse {
 
 				private Long swipingCardNumber;
 
+				private Long placeOrderNumber;
+
 				public Long getInComingPartsNumber() {
 					return this.inComingPartsNumber;
 				}
@@ -642,6 +664,14 @@ public class ListTasksResponse extends AcsResponse {
 
 				public void setSwipingCardNumber(Long swipingCardNumber) {
 					this.swipingCardNumber = swipingCardNumber;
+				}
+
+				public Long getPlaceOrderNumber() {
+					return this.placeOrderNumber;
+				}
+
+				public void setPlaceOrderNumber(Long placeOrderNumber) {
+					this.placeOrderNumber = placeOrderNumber;
 				}
 			}
 		}

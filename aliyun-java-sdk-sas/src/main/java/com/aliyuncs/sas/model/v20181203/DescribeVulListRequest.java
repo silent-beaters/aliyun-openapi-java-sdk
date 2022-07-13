@@ -35,6 +35,8 @@ public class DescribeVulListRequest extends RpcAcsRequest<DescribeVulListRespons
 
 	private String aliasName;
 
+	private String name;
+
 	private String necessity;
 
 	private String uuids;
@@ -49,7 +51,7 @@ public class DescribeVulListRequest extends RpcAcsRequest<DescribeVulListRespons
 
 	private Integer currentPage;
 	public DescribeVulListRequest() {
-		super("Sas", "2018-12-03", "DescribeVulList", "sas");
+		super("Sas", "2018-12-03", "DescribeVulList");
 		setMethod(MethodType.POST);
 		try {
 			com.aliyuncs.AcsRequest.class.getDeclaredField("productEndpointMap").set(this, Endpoint.endpointMap);
@@ -109,6 +111,17 @@ public class DescribeVulListRequest extends RpcAcsRequest<DescribeVulListRespons
 		this.aliasName = aliasName;
 		if(aliasName != null){
 			putQueryParameter("AliasName", aliasName);
+		}
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+		if(name != null){
+			putQueryParameter("Name", name);
 		}
 	}
 

@@ -33,6 +33,8 @@ public class DescribeAIInstanceRequest extends RpcAcsRequest<DescribeAIInstanceR
 
 	private Long pageSize;
 
+	private String instanceType;
+
 	private String projectId;
 	public DescribeAIInstanceRequest() {
 		super("Vcs", "2020-05-15", "DescribeAIInstance");
@@ -84,6 +86,17 @@ public class DescribeAIInstanceRequest extends RpcAcsRequest<DescribeAIInstanceR
 		this.pageSize = pageSize;
 		if(pageSize != null){
 			putBodyParameter("PageSize", pageSize.toString());
+		}
+	}
+
+	public String getInstanceType() {
+		return this.instanceType;
+	}
+
+	public void setInstanceType(String instanceType) {
+		this.instanceType = instanceType;
+		if(instanceType != null){
+			putBodyParameter("InstanceType", instanceType);
 		}
 	}
 

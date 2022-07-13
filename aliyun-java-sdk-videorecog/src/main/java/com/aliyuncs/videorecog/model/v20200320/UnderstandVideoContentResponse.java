@@ -25,21 +25,13 @@ import com.aliyuncs.transform.UnmarshallerContext;
  */
 public class UnderstandVideoContentResponse extends AcsResponse {
 
-	private String message;
-
 	private String requestId;
 
 	private String code;
 
+	private String message;
+
 	private Data data;
-
-	public String getMessage() {
-		return this.message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
 
 	public String getRequestId() {
 		return this.requestId;
@@ -55,6 +47,14 @@ public class UnderstandVideoContentResponse extends AcsResponse {
 
 	public void setCode(String code) {
 		this.code = code;
+	}
+
+	public String getMessage() {
+		return this.message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 	public Data getData() {
@@ -89,28 +89,20 @@ public class UnderstandVideoContentResponse extends AcsResponse {
 
 		public static class VideoInfo {
 
-			private Float fps;
-
-			private Long duration;
+			private Long width;
 
 			private Long height;
 
-			private Long width;
+			private Long duration;
 
-			public Float getFps() {
-				return this.fps;
+			private Float fps;
+
+			public Long getWidth() {
+				return this.width;
 			}
 
-			public void setFps(Float fps) {
-				this.fps = fps;
-			}
-
-			public Long getDuration() {
-				return this.duration;
-			}
-
-			public void setDuration(Long duration) {
-				this.duration = duration;
+			public void setWidth(Long width) {
+				this.width = width;
 			}
 
 			public Long getHeight() {
@@ -121,12 +113,20 @@ public class UnderstandVideoContentResponse extends AcsResponse {
 				this.height = height;
 			}
 
-			public Long getWidth() {
-				return this.width;
+			public Long getDuration() {
+				return this.duration;
 			}
 
-			public void setWidth(Long width) {
-				this.width = width;
+			public void setDuration(Long duration) {
+				this.duration = duration;
+			}
+
+			public Float getFps() {
+				return this.fps;
+			}
+
+			public void setFps(Float fps) {
+				this.fps = fps;
 			}
 		}
 	}

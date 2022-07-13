@@ -101,6 +101,14 @@ public class ListIoTCloudConnectorsResponse extends AcsResponse {
 
 		private Long modifyTime;
 
+		private String ioTCloudConnectorGroupId;
+
+		private String mode;
+
+		private String ipFeature;
+
+		private String type;
+
 		private List<String> vSwitchList;
 
 		public String getIoTCloudConnectorId() {
@@ -197,6 +205,38 @@ public class ListIoTCloudConnectorsResponse extends AcsResponse {
 
 		public void setModifyTime(Long modifyTime) {
 			this.modifyTime = modifyTime;
+		}
+
+		public String getIoTCloudConnectorGroupId() {
+			return this.ioTCloudConnectorGroupId;
+		}
+
+		public void setIoTCloudConnectorGroupId(String ioTCloudConnectorGroupId) {
+			this.ioTCloudConnectorGroupId = ioTCloudConnectorGroupId;
+		}
+
+		public String getMode() {
+			return this.mode;
+		}
+
+		public void setMode(String mode) {
+			this.mode = mode;
+		}
+
+		public String getIpFeature() {
+			return this.ipFeature;
+		}
+
+		public void setIpFeature(String ipFeature) {
+			this.ipFeature = ipFeature;
+		}
+
+		public String getType() {
+			return this.type;
+		}
+
+		public void setType(String type) {
+			this.type = type;
 		}
 
 		public List<String> getVSwitchList() {
